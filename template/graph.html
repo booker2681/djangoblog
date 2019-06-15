@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% block is_graph %}nav-link active{% endblock %}
+{% block is_trend %}nav-link{% endblock %}
+{% block content %}
+        <!-- ============================================================== -->
+        <div class="dashboard-wrapper">
+            <div class="container-fluid  dashboard-content">
+                <!-- title -->
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                        <div class="page-header">
+                            <h2 class="pageheader-title">查詢犯罪人網路</h2>
+                        </div>
+                    </div>
+                </div>
+                <!-- graph -->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 displayNone" id='graph_card_div'>
+                    <div class="card">
+                        <h5 class="card-header">網路</h5>
+                        <div id='graph_div' class="card-body">
+                            <div id="graph"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- graph option -->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 displayNone" id="option_card_div">
+                    <div class="card" id="option_card">
+                        <h5 class="card-header">網路選項</h5>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-3 col-form-label text-sm-right">關聯網路層級</label>
+                                <div class="col-12 col-sm-8 col-lg-6">
+                                    <select class="form-control" id='level'>
+                                        {% for l in level %}
+                                        <option value="{{ forloop.counter }}">{{ l }}</option>
+                                        {% endfor %}
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row text-right">
+                            <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
+                                <button class="btn btn-space btn-primary" onclick="send_graph_data()">查詢</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- search -->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="search_card_div">
+                    <div class="card" id="search_card">
+                        <h5 class="card-header">搜尋犯罪人</h5>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-3 col-form-label text-sm-right">犯罪人</label>
+                                <div class="col-12 col-sm-8 col-lg-6">
+                                    <input id='prisoner' required="" placeholder="請輸入犯罪人" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row text-right">
+                            <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
+                                <button class="btn btn-space btn-primary" onclick="search_prisoner()" id="search_btn">搜尋</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- prisoner list -->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 displayNone" id='prisoner_card_div'>
+                    <div class="card" id="prisoner_card">
+                        <h5 class="card-header">犯罪人列表</h5>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <table class="table table-hover" id='prisoner_table'>
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">名字</th>
+                                        <th scope="col"></th>
+                                      </tr>
+                                    </thead>
+                                    <tbody id='prisoner_tbody'>
+                                      <!-- <tr>
+                                        <th scope="row">1</th>
+                                        <td>Mark</td>
+                                      </tr> -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+            <!-- ============================================================== -->
+            <!-- footer -->
+            <!-- ============================================================== -->
+            <div class="footer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- end footer -->
+            <!-- ============================================================== -->
+        </div>
+{% load staticfiles %}
+<!-- <script src="{% static "js/trend.js" %}"></script>   -->
+<script src="{% static "js/graph.js" %}"></script> 
+{% endblock %}
