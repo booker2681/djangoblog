@@ -37,7 +37,7 @@ def get_graph_data(request):
     prisoner = request.POST['prisoner']
     level = request.POST['level']
 
-    global Node, Link, Edge
+    # global Node, Link, Edge
     Node = [] # Graph node
     Link = [] # Graph edge
     Target = [prisoner] # 現在level要找的node
@@ -46,12 +46,14 @@ def get_graph_data(request):
 
     for l in range(int(level)): 
         for t in Target:
-            get_graph(t)
+            get_node(t, Node, Edge)
             haveFindNode.append(t)
         Target = []
         for n in Node: # target為新增的node中 不曾找過的node
             if(n not in haveFindNode): # 曾經找過node 不再是下次target
                 Target.append(n)
+
+    get_Edge(Node, Edge, Link)
 
     Map = []
     for n in Node:
@@ -62,38 +64,66 @@ def get_graph_data(request):
 
     return JsonResponse(result)
 
-def get_graph(prisoner):
-
+def get_node(prisoner, Node, Edge): # 取得所有鄰居node
     client = MongoClient('140.120.13.244', 27018)
+    if(prisoner not in Node):
+        Node.append(prisoner)
     if(prisoner not in Edge):
         this_Edge = list( client.Law.Edge.find({'From Name': prisoner}))
         Edge[prisoner] = this_Edge
     else:
         this_Edge = Edge[prisoner]
-    prisoner_relate_node = []
-
-    if(prisoner not in Node):
-        Node.append(prisoner)
-    
 
     for e in this_Edge:
         if(e['To Name'] not in Node):
             Node.append(e['To Name'])
-        prisoner_relate_node.append(e['To Name'])
-        # print('e: ', e)
-        Link.append({'source': Node.index(e['From Name']), 'target': Node.index(e['To Name']), 'weight': e['Weight']})
-    
-    for ni in prisoner_relate_node:
+
+def get_Edge(Node, Edge, Link): # 取得所有node的edge
+    client = MongoClient('140.120.13.244', 27018)
+    for ni in Node:
         if(ni not in Edge):
-            relate_edge = list( client.Law.Edge.find({'From Name': ni}))
-            Edge[ni] = relate_edge
+            this_Edge = list( client.Law.Edge.find({'From Name': ni}))
+            Edge[ni] = this_Edge
         else:
-            relate_edge = Edge[ni]
-        # print('relate', relate_edge)
-        for re in relate_edge:
-            for nj in prisoner_relate_node:
-                if(re['To Name'] == nj):
-                    Link.append({'source': Node.index(re['From Name']), 'target': Node.index(re['To Name']), 'weight': re['Weight']})
+            this_Edge = Edge[ni]
+        for e in this_Edge:
+            for nj in Node:
+                if(e['To Name'] == nj):
+                    Link.append({'source': Node.index(e['From Name']), 'target': Node.index(e['To Name']), 'weight': e['Weight']})
+
+# def get_graph(prisoner, Node, Link, Edge): # 單一子圖
+
+#     client = MongoClient('140.120.13.244', 27018)
+#     if(prisoner not in Edge):
+#         this_Edge = list( client.Law.Edge.find({'From Name': prisoner}))
+#         Edge[prisoner] = this_Edge
+#     else:
+#         this_Edge = Edge[prisoner]
+#     prisoner_relate_node = []
+
+#     if(prisoner not in Node):
+#         Node.append(prisoner)
+    
+#     # 找到鄰居節點
+#     for e in this_Edge:
+#         if(e['To Name'] not in Node):
+#             Node.append(e['To Name'])
+#         prisoner_relate_node.append(e['To Name'])
+#         # print('e: ', e)
+#         Link.append({'source': Node.index(e['From Name']), 'target': Node.index(e['To Name']), 'weight': e['Weight']})
+    
+#     # 檢查鄰居節點間關係
+#     for ni in prisoner_relate_node:
+#         if(ni not in Edge):
+#             relate_edge = list( client.Law.Edge.find({'From Name': ni}))
+#             Edge[ni] = relate_edge
+#         else:
+#             relate_edge = Edge[ni]
+#         # print('relate', relate_edge)
+#         for re in relate_edge:
+#             for nj in prisoner_relate_node:
+#                 if(re['To Name'] == nj):
+#                     Link.append({'source': Node.index(re['From Name']), 'target': Node.index(re['To Name']), 'weight': re['Weight']})
 
 
 
@@ -110,57 +140,3 @@ def get_graph(prisoner):
 # print(len(List))
 # print(List)
 
-# 遞迴作法 probelm: second level preformance low
-# def get_graph_data(request):
-#     print(request.POST)
-#     prisoner = request.POST['prisoner']
-#     level = request.POST['level']
-
-#     global Node, Link
-#     Node = []
-#     Link = []
-#     Target = [prisoner] # 現在level要找的node
-#     haveFindNode = [] # 曾經找過的node
-
-#     for l in range(int(level)): 
-#         for t in Target:
-#             get_graph(t)
-#             haveFindNode.append(t)
-#         Target = []
-#         for n in Node: # target為新增的node中 不曾找過的node
-#             if(n not in haveFindNode): # 曾經找過node 不再是下次target
-#                 Target.append(n)
-
-#     Map = []
-#     for n in Node:
-#         Map.append({'name': n})
-
-#     result = {'Map': Map, 'Link': Link}
-#     # print(result)
-
-#     return JsonResponse(result)
-
-# def get_graph(prisoner):
-
-#     client = MongoClient('140.120.13.244', 27018)
-#     Edge = list( client.Law.Edge.find({'From Name': prisoner}))
-#     prisoner_relate_node = []
-
-#     if(prisoner not in Node):
-#         Node.append(prisoner)
-    
-
-#     for e in Edge:
-#         if(e['To Name'] not in Node):
-#             Node.append(e['To Name'])
-#         prisoner_relate_node.append(e['To Name'])
-#         # print('e: ', e)
-#         Link.append({'source': Node.index(e['From Name']), 'target': Node.index(e['To Name']), 'weight': e['Weight']})
-    
-#     for ni in prisoner_relate_node:
-#         relate_edge = list( client.Law.Edge.find({'From Name': ni}))
-#         # print('relate', relate_edge)
-#         for re in relate_edge:
-#             for nj in prisoner_relate_node:
-#                 if(re['To Name'] == nj):
-#                     Link.append({'source': Node.index(re['From Name']), 'target': Node.index(re['To Name']), 'weight': re['Weight']})
