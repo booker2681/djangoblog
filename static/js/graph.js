@@ -34,6 +34,7 @@ function search_prisoner(){
 
 function send_graph_data(prisoner){
     var level = $('#level').val();
+    $('#level_send_graph_data').attr('onclick', 'send_graph_data(' + '\'' + prisoner + '\'' + ')')
     console.log(level)
 
     $.ajax({
@@ -47,7 +48,8 @@ function send_graph_data(prisoner){
         type:"POST",
 
         success: function(data) {
-            create_graph()
+            console.log(data)
+            create_graph(data)
             $("#graph_card_div").show();
             $("#option_card_div").show();
         },
@@ -57,38 +59,25 @@ function send_graph_data(prisoner){
     });
 }
 
-function create_graph(){
+function create_graph(data){
     $('#graph').remove();
     $('#graph_div').append('<div id="graph"></div>');
 
-    var map=[
-        {name:"小美"},
-        {name:"小名"},
-        {name:"阿夜"},
-        {name:"大日"},
-        {name:"老鼠"},
-        {name:"蝦米"},
-        {name:"大象"},
-        {name:"麥稈"},
+    var map = data['Map']
+    var links = data['Link']
 
-    ];
-    // 宣告link
-    var links=[
-        {source:0,
-         target:1},
-        {source:0,
-         target:5},
-        {source:1,
-         target:2},
-        {source:1,
-         target:3},
-        {source:2,
-         target:4},
-        {source:2,
-        target:6},
-        {source:7,
-        target:3},
-    ];
+    console.log(data)
+
+    // var map=[
+    //     {name:"小美"},
+    //     {name:"小名"},
+    // ];
+    // // 宣告link
+    // var links=[
+    //     {source:0,
+    //      target:1},
+    // ];
+
     // 設定畫布(SVG)的長、寬
     var width = document.getElementById('search_card').offsetWidth-30
     var height = 450;
