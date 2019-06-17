@@ -35,6 +35,8 @@ function search_prisoner(){
 function send_graph_data(prisoner){
     var level = $('#level').val();
     $('#level_send_graph_data').attr('onclick', 'send_graph_data(' + '\'' + prisoner + '\'' + ')')
+    $("button").attr("disabled", true);
+
     console.log(level)
 
     $.ajax({
@@ -52,9 +54,12 @@ function send_graph_data(prisoner){
             create_graph(data)
             $("#graph_card_div").show();
             $("#option_card_div").show();
+
+            $("button").attr("disabled", false);
         },
         
         error:function() {
+            $("button").attr("disabled", false);
         }
     });
 }
@@ -104,7 +109,7 @@ function create_graph(data){
         .enter().append("line")
         // 線的寬度跟樣式
         .attr("stroke-width", 2)
-        .attr("stroke","black");
+        .attr("stroke","rgb(221, 221, 221)");
     // 繪製點
     var node = svg.append("g")
         // 繪製類別 - 點
