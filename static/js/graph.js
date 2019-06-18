@@ -120,10 +120,10 @@ function create_graph(data){
         .data(map)
         .enter().append("circle")
         // 圓的寬度與樣式
-        .attr("r", 12)
+        .attr("r", 17) // 圓大小　
         .attr("fill", function(d,i) { return color(i); })
         .attr('stroke','white')
-        .attr('stroke-width',2)
+        .attr('stroke-width',4) // 外圓寬度
         .call(d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
@@ -148,7 +148,7 @@ function create_graph(data){
 
     simulation.force("link")
         .links(links)
-        .distance(50);
+        .distance(120);
 
     simulation.force("charge")
         .strength(-60)
@@ -186,6 +186,38 @@ function create_graph(data){
         d.fy = null;
     }
 }
+
+function find_path(){
+    var source = $('#source').val();
+    var target = $('#target').val();
+    $("button").attr("disabled", true);
+
+    console.log(source, target)
+
+    $.ajax({
+        url: "/get_shortest_path/",        
+        dataType: "json",
+        traditional: true, 
+        data: {
+            source: source,
+            target: target,
+        },
+        type:"POST",
+
+        success: function(data) {
+            console.log(data)
+            create_graph(data)
+            $("#graph_card_div").show();
+
+            $("button").attr("disabled", false);
+        },
+        
+        error:function() {
+            $("button").attr("disabled", false);
+        }
+    });
+}
+
 
 // chart.js
 // function create_predict_trend(data, type){

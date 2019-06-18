@@ -3,6 +3,7 @@ from django.template.loader import get_template
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from pymongo import MongoClient
+import networkx as nx
 
 def homepage(request):
 	template = get_template('index.html')
@@ -91,42 +92,33 @@ def get_Edge(Node, Edge, Link): # 取得所有node的edge
                 if(e['To Name'] == nj):
                     Link.append({'source': Node.index(e['From Name']), 'target': Node.index(e['To Name']), 'weight': e['Weight']})
 
-# def get_graph(prisoner, Node, Link, Edge): # 單一子圖
+@csrf_exempt
+def get_shortest_path(request):
+    source = request.POST['source']
+    target = request.POST['target']
 
-#     client = MongoClient('140.120.13.244', 27018)
-#     if(prisoner not in Edge):
-#         this_Edge = list( client.Law.Edge.find({'From Name': prisoner}))
-#         Edge[prisoner] = this_Edge
-#     else:
-#         this_Edge = Edge[prisoner]
-#     prisoner_relate_node = []
+    print(source, target)
+    G = nx.Graph()
+    client = MongoClient('140.120.13.244', 27018)
+    Edge = list(client.Law.Edge.find({}))
+    for i, e in enumerate(Edge):
+        G.add_edge(e['From Name'], e['To Name'])
+        print(i, " ", e['From Name'], " ", e['To Name'])
 
-#     if(prisoner not in Node):
-#         Node.append(prisoner)
-    
-#     # 找到鄰居節點
-#     for e in this_Edge:
-#         if(e['To Name'] not in Node):
-#             Node.append(e['To Name'])
-#         prisoner_relate_node.append(e['To Name'])
-#         # print('e: ', e)
-#         Link.append({'source': Node.index(e['From Name']), 'target': Node.index(e['To Name']), 'weight': e['Weight']})
-    
-#     # 檢查鄰居節點間關係
-#     for ni in prisoner_relate_node:
-#         if(ni not in Edge):
-#             relate_edge = list( client.Law.Edge.find({'From Name': ni}))
-#             Edge[ni] = relate_edge
-#         else:
-#             relate_edge = Edge[ni]
-#         # print('relate', relate_edge)
-#         for re in relate_edge:
-#             for nj in prisoner_relate_node:
-#                 if(re['To Name'] == nj):
-#                     Link.append({'source': Node.index(re['From Name']), 'target': Node.index(re['To Name']), 'weight': re['Weight']})
+    Map = []
+    Link = []
+    try:
+        path = nx.shortest_path(G, source = source, target = target)
+        for ni, n in enumerate(path):
+            Map.append({'name': n})
+            if(ni!=len(path)-1):
+                Link.append({'source': ni, 'target': ni+1})
+    except:
+        path = []
+        Map = [{'name': source}, {'name': target}]
 
-
-
+    result = {'Map': Map, 'Link': Link}
+    return JsonResponse(result)
         
 
 
