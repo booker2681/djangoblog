@@ -17,6 +17,7 @@
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 displayNone" id='graph_card_div'>
                     <div class="card">
                         <h5 class="card-header">網路</h5>
+                        <h6>點選邊或雙擊點查看判決書</h6>
                         <div id='graph_div' class="card-body">
                             <div id="graph"></div>
                         </div>
@@ -64,6 +65,31 @@
                         </div>
                     </div>
                 </div>
+                <!-- find path -->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="find_path_card_div">
+                    <div class="card" id="find_path_card">
+                        <h5 class="card-header">搜尋兩犯罪人間路徑</h5>
+                        <div class="card-body">
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-3 col-form-label text-sm-right">犯罪人1</label>
+                                <div class="col-12 col-sm-8 col-lg-6">
+                                    <input id='source' required="" placeholder="請輸入犯罪人" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-12 col-sm-3 col-form-label text-sm-right">犯罪人2</label>
+                                <div class="col-12 col-sm-8 col-lg-6">
+                                    <input id='target' required="" placeholder="請輸入犯罪人" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row text-right">
+                            <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
+                                <button class="btn btn-space btn-primary" onclick="find_path()" id="find_path_btn">找路徑</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- prisoner list -->
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12 displayNone" id='prisoner_card_div'>
                     <div class="card" id="prisoner_card">
@@ -89,31 +115,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- find path -->
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12" id="find_path_card_div">
-                        <div class="card" id="find_path_card">
-                            <h5 class="card-header">搜尋兩犯罪人間路徑</h5>
-                            <div class="card-body">
-                                <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right">犯罪人1</label>
-                                    <div class="col-12 col-sm-8 col-lg-6">
-                                        <input id='source' required="" placeholder="請輸入犯罪人" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-12 col-sm-3 col-form-label text-sm-right">犯罪人2</label>
-                                    <div class="col-12 col-sm-8 col-lg-6">
-                                        <input id='target' required="" placeholder="請輸入犯罪人" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="form-group row text-right">
-                                <div class="col col-sm-10 col-lg-9 offset-sm-1 offset-lg-0">
-                                    <button class="btn btn-space btn-primary" onclick="find_path()" id="find_path_btn">找路徑</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
             </div>
         </div>
 
@@ -132,6 +133,72 @@
             <!-- end footer -->
             <!-- ============================================================== -->
         </div>
+
+        <!-- verdict_modal -->
+        <div class="modal fade" id="verdict_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="verdict_modal_label">關聯判決書</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="verdict_modal_body">
+                        <h2 id="verdict_modal_title"></h2>
+                        <div class="form-group row" id='verdict_modal_table_row'>
+                            <table class="table table-hover" id='verdict_modal_table'>
+                                <thead>
+                                    <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">判決書</th>
+                                    <th scope="col">犯罪事項</th>
+                                    <th scope="col"></th>
+                                    </tr>
+                                </thead>
+                                <tbody id='verdict_modal_tbody'>
+                                    <!-- <tr>
+                                    <th scope="row">1</th>
+                                    <td>Mark</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <h2 id="verdict_modal_p_id"></h2>
+                        <h3 id="verdict_modal_p_title"></h3>
+                        <h3 id="verdict_modal_p_cat"></h3>
+                        <h3 id="verdict_modal_p_year"></h3>
+                        <h3 id="verdict_modal_p_loc"></h3>
+                        <p id='verdict_modal_p'></p>
+                        <button class="btn btn-space btn-primary displayNone" onclick="modal_back()" id="modal_back_btn">返回列表</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- verdict_view_modal
+        <div class="modal fade" id="verdict_view_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="verdict_view_modal_label">關聯判決書</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" id="verdict_view_modal_body">
+                        <h2 id="verdict_view_modal_title"></h2>
+                        <p id='verdict_view_modal_p'></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        
 {% load staticfiles %}
 <!-- <script src="{% static "js/trend.js" %}"></script>   -->
 <script src="{% static "js/graph.js" %}"></script> 

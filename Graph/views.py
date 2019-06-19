@@ -4,6 +4,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from pymongo import MongoClient
 import networkx as nx
+import ast
 
 def homepage(request):
 	template = get_template('index.html')
@@ -57,8 +58,12 @@ def get_graph_data(request):
     get_Edge(Node, Edge, Link)
 
     Map = []
+
+    client = MongoClient('140.120.13.244', 27018)
     for n in Node:
-        Map.append({'name': n})
+        this_Node = client.Law.Node.find({'Name': n})[0]
+        this_Node = {'name': n, 'verdict': ast.literal_eval(this_Node['Verdict']), 'title': ast.literal_eval(this_Node['Title'])}
+        Map.append(this_Node)
 
     result = {'Map': Map, 'Link': Link}
     # print(result)
@@ -90,7 +95,7 @@ def get_Edge(Node, Edge, Link): # 取得所有node的edge
         for e in this_Edge:
             for nj in Node:
                 if(e['To Name'] == nj):
-                    Link.append({'source': Node.index(e['From Name']), 'target': Node.index(e['To Name']), 'weight': e['Weight']})
+                    Link.append({'source': Node.index(e['From Name']), 'target': Node.index(e['To Name']), 'weight': e['Weight'], 'verdict': ast.literal_eval(e['Verdict']), 'title': ast.literal_eval(e['Title'])})
 
 @csrf_exempt
 def get_shortest_path(request):
@@ -103,21 +108,43 @@ def get_shortest_path(request):
     Edge = list(client.Law.Edge.find({}))
     for i, e in enumerate(Edge):
         G.add_edge(e['From Name'], e['To Name'])
-        print(i, " ", e['From Name'], " ", e['To Name'])
+        # print(i, " ", e['From Name'], " ", e['To Name'])
 
-    Map = []
+    Node = []
     Link = []
+    Map = []
     try:
         path = nx.shortest_path(G, source = source, target = target)
         for ni, n in enumerate(path):
-            Map.append({'name': n})
+            Node.append(n)
             if(ni!=len(path)-1):
-                Link.append({'source': ni, 'target': ni+1})
+                this_Edge = list(client.Law.Edge.find({'From Name': n, 'To Name': path[ni+1]}))[0]
+                Link.append({'source': ni, 'target': ni+1, 'weight': this_Edge['Weight'], 'verdict': ast.literal_eval(this_Edge['Verdict']), 'title': ast.literal_eval(this_Edge['Title'])})
     except:
         path = []
-        Map = [{'name': source}, {'name': target}]
+        Node = [source, target]
+    
+    for n in Node: 
+        try:
+            this_Node = client.Law.Node.find({'Name': n})[0]
+            this_Node = {'name': n, 'verdict': ast.literal_eval(this_Node['Verdict']), 'title': ast.literal_eval(this_Node['Title'])}
+        except:
+            this_Node = {'name': n}
+        Map.append(this_Node)
 
     result = {'Map': Map, 'Link': Link}
+    return JsonResponse(result)
+
+@csrf_exempt
+def get_verdict(request):
+    verdict_id = request.POST['verdict']
+
+    print(verdict_id)
+
+    client = MongoClient('140.120.13.244', 27018)
+    Verdict = list(client.Law.Verdict.find({'JID': verdict_id}))[0]
+
+    result = {'JFULL': Verdict['JFULL'], 'JTITLE': Verdict['JTITLE'], 'JLOC': Verdict['JLOC'], 'JCAT': Verdict['JCAT'], 'JDATE': Verdict['JDATE'], 'JYEAR': Verdict['JYEAR'], 'JID': Verdict['JID']}
     return JsonResponse(result)
         
 

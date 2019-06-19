@@ -24,6 +24,7 @@ Graph_patterns = [
     re_path(r'^get_graph_data/$', Graph_views.get_graph_data),
     re_path(r'^search_prisoner/$', Graph_views.search_prisoner),
     re_path(r'^get_shortest_path/$', Graph_views.get_shortest_path),
+    re_path(r'^get_verdict/$', Graph_views.get_verdict),
 ]
 
 urlpatterns = [
