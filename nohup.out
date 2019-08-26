@@ -1,0 +1,1731 @@
+Watching for file changes with StatReloader
+[22/Jun/2019 00:27:47] "GET /graph/ HTTP/1.1" 200 16632
+[22/Jun/2019 00:27:47] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 140421
+[22/Jun/2019 00:27:47] "GET /static/assets/vendor/fonts/circular-std/style.css HTTP/1.1" 200 1512
+[22/Jun/2019 00:27:47] "GET /static/js/graph.js HTTP/1.1" 200 13581
+[22/Jun/2019 00:27:47] "GET /static/assets/libs/css/style.css HTTP/1.1" 200 126641
+[22/Jun/2019 00:27:47] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/css/all.min.css HTTP/1.1" 200 55967
+[22/Jun/2019 00:27:47] "GET /static/assets/vendor/jquery/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[22/Jun/2019 00:27:47] "GET /static/assets/vendor/slimscroll/jquery.slimscroll.js HTTP/1.1" 200 13831
+[22/Jun/2019 00:27:47] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js HTTP/1.1" 200 210612
+[22/Jun/2019 00:27:47] "GET /static/assets/libs/js/main-js.js HTTP/1.1" 200 4076
+[22/Jun/2019 00:27:47] "GET /static/assets/vendor/fonts/circular-std/CircularStd-Medium.woff HTTP/1.1" 200 40840
+[22/Jun/2019 00:27:47] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 75440
+[22/Jun/2019 00:27:48] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+Watching for file changes with StatReloader
+[22/Jun/2019 00:28:37] "GET /graph/ HTTP/1.1" 200 16632
+[22/Jun/2019 00:28:38] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+[22/Jun/2019 00:33:11] "GET /graph/ HTTP/1.1" 200 16632
+[22/Jun/2019 00:33:12] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+[22/Jun/2019 00:34:42] "POST /search_prisoner/ HTTP/1.1" 200 36
+[22/Jun/2019 00:34:47] "POST /get_graph_data/ HTTP/1.1" 200 13787
+[22/Jun/2019 00:34:47] "GET /static/assets/images/down-arrow.png HTTP/1.1" 304 0
+[22/Jun/2019 05:54:58] code 400, message Bad request syntax ('\x16\x03\x01\x01"\x01\x00\x01\x1e\x03\x03¤Ù\x05ð\x03]\x0eq»\x00\r\x83~\x17\x81pO¾+Wû ÆzV>ý\x04\x06ï\x06,\x00\x00\x88À0À,À(À$À\x14À')
+[22/Jun/2019 05:54:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 47853)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 32815)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[22/Jun/2019 05:55:05] "GET / HTTP/1.1" 302 0
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 49565)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('92.118.160.45', 59026)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[22/Jun/2019 21:23:51] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.4.2')
+[22/Jun/2019 21:23:51] "SSH-2.0-paramiko_2.4.2" 400 -
+[23/Jun/2019 06:27:39] "GET / HTTP/1.1" 302 0
+----------------------------------------
+Exception happened during processing of request from ('198.108.67.48', 41882)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[23/Jun/2019 09:42:09] code 400, message Bad request syntax ('SSH-2.0-OpenSSH')
+[23/Jun/2019 09:42:09] "SSH-2.0-OpenSSH" 400 -
+[23/Jun/2019 15:25:50] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:25:50] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:25:53] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:25:53] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:25:56] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:25:56] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:00] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:00] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:03] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:03] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:06] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:06] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:09] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:09] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:12] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:12] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:16] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:16] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:19] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:19] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:22] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:22] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:25] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:25] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:28] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:28] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:32] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:32] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:35] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:35] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:38] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:38] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:41] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:41] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:44] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:44] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:48] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:48] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:51] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:51] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:54] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:54] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:26:58] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:26:58] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:01] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:01] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:04] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:04] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:07] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:07] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:11] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:11] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:14] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:14] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:17] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:17] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:20] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:20] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:24] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:24] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:27] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:27] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:30] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:30] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:33] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:33] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:37] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:37] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:40] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:40] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:43] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:43] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:47] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:47] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:50] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:50] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:53] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:53] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:27:56] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:27:56] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:00] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:00] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:03] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:03] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:06] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:06] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:09] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:09] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:12] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:12] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:16] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:16] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:19] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:19] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:22] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:22] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:25] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:25] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:29] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:29] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:32] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:32] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:35] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:35] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:38] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:38] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:42] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:42] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:45] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:45] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:48] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:48] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:52] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:52] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:55] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:55] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:28:58] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:28:58] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:29:02] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:29:02] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:29:05] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:29:05] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:29:08] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:29:08] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:29:11] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:29:11] "SSH-2.0-libssh2_1.4.3" 400 -
+[23/Jun/2019 15:29:14] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.4.3')
+[23/Jun/2019 15:29:14] "SSH-2.0-libssh2_1.4.3" 400 -
+[24/Jun/2019 03:09:28] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.1.2')
+[24/Jun/2019 03:09:28] "SSH-2.0-paramiko_2.1.2" 400 -
+[24/Jun/2019 07:39:46] code 400, message Bad request syntax ('SSH-2.0-Go')
+[24/Jun/2019 07:39:46] "SSH-2.0-Go" 400 -
+----------------------------------------
+Exception happened during processing of request from ('92.63.194.3', 778)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[25/Jun/2019 17:07:33] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.1.2')
+[25/Jun/2019 17:07:33] "SSH-2.0-paramiko_2.1.2" 400 -
+----------------------------------------
+Exception happened during processing of request from ('92.118.160.45', 57406)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('85.14.245.154', 1624)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('92.118.161.53', 61916)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[29/Jun/2019 09:43:16] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.0.2')
+[29/Jun/2019 09:43:16] "SSH-2.0-paramiko_2.0.2" 400 -
+[30/Jun/2019 20:49:55] code 400, message Bad request syntax ('\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[30/Jun/2019 20:49:55] "                        " 400 -
+[30/Jun/2019 20:50:00] code 400, message Bad request syntax ('\x16\x03\x01\x00\x89\x01\x00\x00\x85\x03\x03U;\x9f\x9fÝ\x97\x1eµM1\x8b\x91sä \x02q\x8bV6«\x82ìbª\x00\x98H#')
+[30/Jun/2019 20:50:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[01/Jul/2019 20:51:50] "GET /graph/ HTTP/1.1" 200 16632
+[01/Jul/2019 20:51:51] "GET /static/assets/vendor/fonts/circular-std/style.css HTTP/1.1" 200 1512
+[01/Jul/2019 20:51:51] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 140421
+[01/Jul/2019 20:51:51] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/css/all.min.css HTTP/1.1" 200 55967
+[01/Jul/2019 20:51:51] "GET /static/assets/libs/css/style.css HTTP/1.1" 200 126641
+[01/Jul/2019 20:51:51] "GET /static/js/graph.js HTTP/1.1" 200 13581
+[01/Jul/2019 20:51:52] "GET /static/assets/vendor/jquery/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[01/Jul/2019 20:51:52] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js HTTP/1.1" 200 210612
+[01/Jul/2019 20:51:52] "GET /static/assets/vendor/slimscroll/jquery.slimscroll.js HTTP/1.1" 200 13831
+[01/Jul/2019 20:51:52] "GET /static/assets/libs/js/main-js.js HTTP/1.1" 200 4076
+[01/Jul/2019 20:51:52] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 75440
+[01/Jul/2019 20:51:53] "GET /static/assets/vendor/fonts/circular-std/CircularStd-Medium.woff HTTP/1.1" 200 40840
+[01/Jul/2019 20:51:54] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+----------------------------------------
+Exception happened during processing of request from ('172.104.242.173', 47600)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[02/Jul/2019 20:13:43] code 400, message Bad request syntax ('SSH-2.0-Go')
+[02/Jul/2019 20:13:43] "SSH-2.0-Go" 400 -
+[02/Jul/2019 23:04:14] "GET / HTTP/1.1" 302 0
+----------------------------------------
+Exception happened during processing of request from ('198.108.67.48', 61200)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('92.118.160.49', 63759)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+Invalid HTTP_HOST header: 'www.baidu.com'. You may need to add 'www.baidu.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.123cha.com'. You may need to add 'www.123cha.com' to ALLOWED_HOSTS.
+Bad Request: /http:/www.123cha.com/
+Bad Request: /http:/www.baidu.com/
+Invalid HTTP_HOST header: 'www.bing.com'. You may need to add 'www.bing.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.boxun.com'. You may need to add 'www.boxun.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.epochtimes.com'. You may need to add 'www.epochtimes.com' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.rfa.org'. You may need to add 'www.rfa.org' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'www.minghui.org'. You may need to add 'www.minghui.org' to ALLOWED_HOSTS.
+Invalid HTTP_HOST header: 'wujieliulan.com'. You may need to add 'wujieliulan.com' to ALLOWED_HOSTS.
+Bad Request: /http:/www.bing.com/
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /http:/www.boxun.com/
+[03/Jul/2019 12:16:44] "GET http://www.boxun.com/ HTTP/1.1" 400 59360
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[03/Jul/2019 12:16:44] "GET http://www.boxun.com/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('101.24.126.65', 4203)
+[03/Jul/2019 12:16:44] "GET http://www.123cha.com/ HTTP/1.1" 400 59386
+Bad Request: /http:/www.rfa.org/
+[03/Jul/2019 12:16:44] "GET http://www.baidu.com/ HTTP/1.1" 400 59360
+Bad Request: /http:/www.minghui.org/
+[03/Jul/2019 12:16:45] "GET http://www.minghui.org/ HTTP/1.1" 400 59412
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[03/Jul/2019 12:16:45] "GET http://www.rfa.org/ HTTP/1.1" 400 59306
+Bad Request: /http:/www.epochtimes.com/
+[03/Jul/2019 12:16:45] "GET http://www.epochtimes.com/ HTTP/1.1" 400 59490
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[03/Jul/2019 12:16:45] "GET http://www.epochtimes.com/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('101.24.126.65', 4205)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[03/Jul/2019 12:16:45] "GET http://www.minghui.org/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('101.24.126.65', 4255)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[03/Jul/2019 12:16:45] "GET http://www.rfa.org/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('101.24.126.65', 4265)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+Bad Request: /http:/wujieliulan.com/
+Bad Request: /www.voanews.com:443
+[03/Jul/2019 12:16:45] "CONNECT www.voanews.com:443 HTTP/1.0" 400 58557
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[03/Jul/2019 12:16:45] "CONNECT www.voanews.com:443 HTTP/1.0" 500 59
+----------------------------------------
+Exception happened during processing of request from ('101.24.126.65', 4256)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 332, in send_headers
+    self.send_preamble()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 252, in send_preamble
+    self._write(('HTTP/%s %s\r\n' % (self.http_version,self.status)).encode('iso-8859-1'))
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[03/Jul/2019 12:16:45] "GET http://www.bing.com/ HTTP/1.1" 400 59332
+[03/Jul/2019 12:16:45] "GET http://wujieliulan.com/ HTTP/1.1" 400 59412
+Invalid HTTP_HOST header: '123.125.114.144'. You may need to add '123.125.114.144' to ALLOWED_HOSTS.
+Bad Request: /http:/123.125.114.144/
+[03/Jul/2019 12:16:47] "HEAD http://123.125.114.144/ HTTP/1.1" 400 60162
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+[03/Jul/2019 12:16:47] "HEAD http://123.125.114.144/ HTTP/1.1" 500 59
+----------------------------------------
+Exception happened during processing of request from ('171.36.134.94', 28412)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 138, in run
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 279, in write
+    self._write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 453, in _write
+    result = self.stdout.write(data)
+  File "/usr/lib/python3.6/socketserver.py", line 803, in write
+    self._sock.sendall(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 141, in run
+    self.handle_error()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 116, in handle_error
+    super().handle_error()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 368, in handle_error
+    self.finish_response()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 180, in finish_response
+    self.write(data)
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 274, in write
+    self.send_headers()
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 331, in send_headers
+    if not self.origin_server or self.client_is_modern():
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 344, in client_is_modern
+    return self.environ['SERVER_PROTOCOL'].upper() != 'HTTP/0.9'
+TypeError: 'NoneType' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 194, in handle_one_request
+    handler.run(self.server.get_app())
+  File "/usr/lib/python3.6/wsgiref/handlers.py", line 144, in run
+    self.close()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 111, in close
+    super().close()
+  File "/usr/lib/python3.6/wsgiref/simple_server.py", line 35, in close
+    self.status.split(' ',1)[0], self.bytes_sent
+AttributeError: 'NoneType' object has no attribute 'split'
+----------------------------------------
+[04/Jul/2019 16:58:09] code 400, message Bad request syntax ('SSH-2.0-libssh2_1.7.0')
+[04/Jul/2019 16:58:09] "SSH-2.0-libssh2_1.7.0" 400 -
+[04/Jul/2019 19:30:59] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[04/Jul/2019 19:30:59] "  /*à     Cookie: mstshash=Administr" 400 -
+[05/Jul/2019 04:43:55] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.0.2')
+[05/Jul/2019 04:43:55] "SSH-2.0-paramiko_2.0.2" 400 -
+[05/Jul/2019 05:04:16] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.1.3')
+[05/Jul/2019 05:04:16] "SSH-2.0-paramiko_2.1.3" 400 -
+[05/Jul/2019 05:04:23] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.1.3')
+[05/Jul/2019 05:04:23] "SSH-2.0-paramiko_2.1.3" 400 -
+[05/Jul/2019 05:04:31] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.1.3')
+[05/Jul/2019 05:04:31] "SSH-2.0-paramiko_2.1.3" 400 -
+[05/Jul/2019 05:04:39] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.1.3')
+[05/Jul/2019 05:04:39] "SSH-2.0-paramiko_2.1.3" 400 -
+[05/Jul/2019 05:04:47] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.1.3')
+[05/Jul/2019 05:04:47] "SSH-2.0-paramiko_2.1.3" 400 -
+[05/Jul/2019 07:53:37] code 400, message Bad request syntax ('SSH-2.0-Go')
+[05/Jul/2019 07:53:37] "SSH-2.0-Go" 400 -
+[05/Jul/2019 16:43:49] "GET / HTTP/1.1" 302 0
+[05/Jul/2019 16:43:50] "GET /graph/ HTTP/1.1" 200 16632
+[05/Jul/2019 21:54:45] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[05/Jul/2019 21:54:45] "  *%à     Cookie: mstshash=Test" 400 -
+[05/Jul/2019 21:55:26] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[05/Jul/2019 21:55:26] "  *%à     Cookie: mstshash=Test" 400 -
+----------------------------------------
+Exception happened during processing of request from ('185.173.35.17', 65304)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[06/Jul/2019 04:38:11] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+[06/Jul/2019 04:38:11] "  +&à     Cookie: mstshash=hello" 400 -
+----------------------------------------
+Exception happened during processing of request from ('139.60.160.145', 2253)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[06/Jul/2019 06:18:21] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[06/Jul/2019 06:18:21] "  *%à     Cookie: mstshash=Test" 400 -
+[06/Jul/2019 06:19:31] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[06/Jul/2019 06:19:31] "  *%à     Cookie: mstshash=Test" 400 -
+[06/Jul/2019 10:31:05] code 400, message Bad request syntax ('SSH-2.0-Go')
+[06/Jul/2019 10:31:05] "SSH-2.0-Go" 400 -
+[07/Jul/2019 08:57:15] code 400, message Bad request syntax ('\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[07/Jul/2019 08:57:15] "                        " 400 -
+[07/Jul/2019 16:05:21] code 400, message Bad request syntax ('\x16\x03\x01\x01"\x01\x00\x01\x1e\x03\x03\x0b\x89K¢p\x86Qìh2áúË-È\x1e\xa0æÈN\x8d\x97\x8fé\x10w\x1bÈF\x8bkm\x00\x00\x88À0À,À(À$À\x14À')
+[07/Jul/2019 16:05:21] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 51589)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 46182)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[07/Jul/2019 16:05:28] "GET / HTTP/1.1" 302 0
+----------------------------------------
+Exception happened during processing of request from ('101.251.238.52', 43555)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('92.63.194.3', 1931)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[08/Jul/2019 05:14:40] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[08/Jul/2019 05:14:40] "  /*à     Cookie: mstshash=Administr" 400 -
+[08/Jul/2019 05:33:24] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00/*à\x00\x00\x00\x00\x00Cookie:')
+[08/Jul/2019 05:33:24] "  /*à     Cookie: mstshash=Administr" 400 -
+[08/Jul/2019 21:12:47] "GET / HTTP/1.1" 302 0
+[08/Jul/2019 21:12:47] "GET /graph/ HTTP/1.1" 200 16632
+[08/Jul/2019 21:12:48] "GET /static/assets/vendor/fonts/circular-std/style.css HTTP/1.1" 200 1512
+[08/Jul/2019 21:12:48] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 140421
+[08/Jul/2019 21:12:48] "GET /static/js/graph.js HTTP/1.1" 200 13581
+[08/Jul/2019 21:12:48] "GET /static/assets/libs/css/style.css HTTP/1.1" 200 126641
+[08/Jul/2019 21:12:48] "GET /static/assets/vendor/jquery/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[08/Jul/2019 21:12:48] "GET /static/assets/vendor/slimscroll/jquery.slimscroll.js HTTP/1.1" 200 13831
+[08/Jul/2019 21:12:48] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js HTTP/1.1" 200 210612
+[08/Jul/2019 21:12:48] "GET /static/assets/libs/js/main-js.js HTTP/1.1" 200 4076
+[08/Jul/2019 21:12:48] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/css/all.min.css HTTP/1.1" 200 55967
+[08/Jul/2019 21:12:49] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 75440
+[08/Jul/2019 21:12:49] "GET /static/assets/vendor/fonts/circular-std/CircularStd-Medium.woff HTTP/1.1" 200 40840
+[08/Jul/2019 21:12:49] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+[08/Jul/2019 21:13:05] "POST /search_prisoner/ HTTP/1.1" 200 36
+[08/Jul/2019 21:13:14] "POST /get_graph_data/ HTTP/1.1" 200 30213
+[08/Jul/2019 21:13:15] "GET /static/assets/images/down-arrow.png HTTP/1.1" 200 1015
+[08/Jul/2019 21:14:12] "POST /get_verdict/ HTTP/1.1" 200 68491
+[08/Jul/2019 21:14:13] "POST /get_verdict/ HTTP/1.1" 200 68491
+[08/Jul/2019 21:15:41] "POST /get_verdict/ HTTP/1.1" 200 50342
+[08/Jul/2019 22:18:18] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.1.2')
+[08/Jul/2019 22:18:18] "SSH-2.0-paramiko_2.1.2" 400 -
+[08/Jul/2019 22:19:46] "POST /get_verdict/ HTTP/1.1" 200 8410
+[09/Jul/2019 03:03:15] "GET / HTTP/1.1" 302 0
+----------------------------------------
+Exception happened during processing of request from ('198.108.67.48', 2732)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[09/Jul/2019 04:10:58] code 400, message Bad request syntax ('SSH-2.0-paramiko_2.4.1')
+[09/Jul/2019 04:10:58] "SSH-2.0-paramiko_2.4.1" 400 -
+[09/Jul/2019 12:13:41] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[09/Jul/2019 12:13:41] "  *%à     Cookie: mstshash=Test" 400 -
+[09/Jul/2019 12:14:32] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[09/Jul/2019 12:14:32] "  *%à     Cookie: mstshash=Test" 400 -
+[09/Jul/2019 22:41:51] "GET /graph/ HTTP/1.1" 200 16632
+[09/Jul/2019 22:41:51] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/css/all.min.css HTTP/1.1" 200 55967
+[09/Jul/2019 22:41:51] "GET /static/js/graph.js HTTP/1.1" 200 13581
+[09/Jul/2019 22:41:52] "GET /static/assets/libs/css/style.css HTTP/1.1" 200 126641
+[09/Jul/2019 22:41:52] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 140421
+[09/Jul/2019 22:41:52] "GET /static/assets/vendor/slimscroll/jquery.slimscroll.js HTTP/1.1" 200 13831
+[09/Jul/2019 22:41:52] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js HTTP/1.1" 200 210612
+[09/Jul/2019 22:41:52] "GET /static/assets/vendor/jquery/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[09/Jul/2019 22:41:52] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 75440
+[09/Jul/2019 22:41:52] "GET /static/assets/vendor/fonts/circular-std/CircularStd-Medium.woff HTTP/1.1" 200 40840
+[09/Jul/2019 22:41:53] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+[09/Jul/2019 22:42:03] "POST /search_prisoner/ HTTP/1.1" 200 124
+[09/Jul/2019 22:42:38] "POST /get_graph_data/ HTTP/1.1" 200 377892
+[09/Jul/2019 22:42:47] "GET /graph/ HTTP/1.1" 200 16632
+[09/Jul/2019 22:42:51] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+[09/Jul/2019 22:43:08] "POST /search_prisoner/ HTTP/1.1" 200 124
+----------------------------------------
+Exception happened during processing of request from ('125.227.28.126', 49556)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[09/Jul/2019 22:43:53] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1776
+[09/Jul/2019 22:43:55] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js.map HTTP/1.1" 404 1779
+[09/Jul/2019 22:44:18] "GET /graph/ HTTP/1.1" 200 16632
+[09/Jul/2019 22:44:39] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1776
+[09/Jul/2019 22:44:40] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+[09/Jul/2019 22:44:48] "POST /get_graph_data/ HTTP/1.1" 200 377892
+[09/Jul/2019 22:45:00] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js.map HTTP/1.1" 404 1779
+[09/Jul/2019 22:46:45] "GET /graph/ HTTP/1.1" 200 16632
+[09/Jul/2019 22:46:46] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1776
+[09/Jul/2019 22:46:46] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js.map HTTP/1.1" 404 1779
+[09/Jul/2019 22:46:46] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+[09/Jul/2019 22:47:01] "POST /search_prisoner/ HTTP/1.1" 200 124
+[09/Jul/2019 22:47:47] "POST /get_graph_data/ HTTP/1.1" 200 124773
+[09/Jul/2019 22:47:56] "POST /get_graph_data/ HTTP/1.1" 200 11391
+[09/Jul/2019 22:49:07] "POST /get_graph_data/ HTTP/1.1" 200 30217
+[09/Jul/2019 22:50:13] "POST /get_verdict/ HTTP/1.1" 200 21766
+[09/Jul/2019 22:50:42] "POST /get_verdict/ HTTP/1.1" 200 114471
+[09/Jul/2019 22:51:32] "POST /get_verdict/ HTTP/1.1" 200 114471
+[09/Jul/2019 22:51:51] "POST /get_verdict/ HTTP/1.1" 200 114471
+[09/Jul/2019 22:52:27] "POST /get_verdict/ HTTP/1.1" 200 14833
+[09/Jul/2019 22:52:40] "POST /get_verdict/ HTTP/1.1" 200 50342
+[10/Jul/2019 00:18:19] "POST /get_shortest_path/ HTTP/1.1" 200 29047
+[10/Jul/2019 00:19:27] "POST /get_shortest_path/ HTTP/1.1" 200 29047
+[10/Jul/2019 00:20:04] "POST /get_verdict/ HTTP/1.1" 200 13374
+[10/Jul/2019 00:20:55] "POST /get_verdict/ HTTP/1.1" 200 235821
+[10/Jul/2019 08:10:26] code 400, message Bad request syntax ('\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[10/Jul/2019 08:10:26] "                        " 400 -
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Jul/2019 08:10:27] "GET / HTTP/1.0" 400 58328
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /
+[10/Jul/2019 08:10:27] "OPTIONS / HTTP/1.0" 400 58356
+[10/Jul/2019 08:10:28] code 400, message Bad request version ('RTSP/1.0')
+[10/Jul/2019 08:10:28] "OPTIONS / RTSP/1.0" 400 -
+[10/Jul/2019 08:10:33] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[10/Jul/2019 08:10:33] "  (rþ          |                    " 400 -
+[10/Jul/2019 08:10:38] code 400, message Bad HTTP/0.9 request type ('\x00')
+[10/Jul/2019 08:10:38] "          versionbind   " 400 -
+[10/Jul/2019 08:10:43] code 400, message Bad HTTP/0.9 request type ('\x00')
+[10/Jul/2019 08:10:43] "            " 400 -
+[10/Jul/2019 08:10:44] code 400, message Bad request syntax ('HELP')
+[10/Jul/2019 08:10:44] "HELP" 400 -
+[10/Jul/2019 08:10:44] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[10/Jul/2019 08:10:44] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[10/Jul/2019 08:10:44] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+[10/Jul/2019 08:10:44] "   qjn0k¡¢" 400 -
+[10/Jul/2019 08:10:50] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[10/Jul/2019 08:10:50] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[10/Jul/2019 08:10:56] code 400, message Bad HTTP/0.9 request type ('l\x00')
+[10/Jul/2019 08:10:56] "l          " 400 -
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /nice ports,/Trinity.txt.bak
+[10/Jul/2019 08:10:56] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 400 58637
+[10/Jul/2019 08:10:56] code 400, message Bad request syntax ('\x01default')
+[10/Jul/2019 08:10:56] "default" 400 -
+[10/Jul/2019 08:11:02] code 400, message Bad HTTP/0.9 request type ('0')
+[10/Jul/2019 08:11:02] "0`  " 400 -
+[10/Jul/2019 08:11:02] code 400, message Bad request version ('SIP/2.0')
+[10/Jul/2019 08:11:02] "OPTIONS sip:nm SIP/2.0" 400 -
+[10/Jul/2019 08:11:07] code 400, message Bad request syntax ('TNMP\x04\x00\x00\x00TNME\x00\x00\x04\x00')
+[10/Jul/2019 08:11:07] "TNMP   TNME   " 400 -
+[10/Jul/2019 08:11:12] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+[10/Jul/2019 08:11:12] "  à     " 400 -
+[10/Jul/2019 08:11:18] code 400, message Bad request syntax ('DmdT\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x00\x11\x11\x00ÿ\x01ÿ\x13')
+[10/Jul/2019 08:11:18] "DmdT           ÿÿ" 400 -
+[10/Jul/2019 08:11:23] code 400, message Bad HTTP/0.9 request type (':\x00\x00\x00/\x00\x00\x00\x02\x00\x00@\x02\x0f\x00\x01\x00=\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00@')
+[10/Jul/2019 08:11:23] ":   /     @  =            /         @                 " 400 -
+[10/Jul/2019 08:11:28] code 400, message Bad request syntax ('\x01\x00\x00ýÎú\x0b°\xa0\x00\x00\x00MMS\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x03\x00ðððð\x0b\x00\x04\x00\x1c\x00\x03\x00N\x00S\x00P\x00l\x00a\x00y\x00e\x00r\x00/\x009\x00.\x000\x00.\x000\x00.\x002\x009\x008\x000\x00;\x00 \x00{\x000\x000\x000\x000\x00A\x00A\x000\x000\x00-\x000\x00A\x000\x000\x00-\x000\x000\x00a\x000\x00-\x00A\x00A\x000\x00A\x00-\x000\x000\x000\x000\x00A\x000\x00A\x00A\x000\x00A\x00A\x000\x00}\x00\x00\x00àmß_')
+[10/Jul/2019 08:11:28] "  ýÎú°    MMS                    ðððð    N S P l a y e r / 9 . 0 . 0 . 2 9 8 0 ;   { 0 0 0 0 A A 0 0 - 0 A 0 0 - 0 0 a 0 - A A 0 A - 0 0 0 0 A 0 A A 0 A A 0 }   àmß_" 400 -
+[10/Jul/2019 08:11:33] code 400, message Bad HTTP/0.9 request type ('\x00Z\x00\x00\x01\x00\x00\x00\x016\x01,\x00\x00\x08\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00')
+[10/Jul/2019 08:11:33] " Z     6,   ÿ      :                4æ           (CONNECT_DATA=(COMMAND=version))" 400 -
+[10/Jul/2019 08:11:39] code 400, message Bad request syntax ('\x00\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x0f\x00')
+[10/Jul/2019 08:11:39] "              " 400 -
+[10/Jul/2019 08:11:45] code 400, message Bad request syntax ('\x94\x00ÍïÑa\x91\x03')
+[10/Jul/2019 08:11:45] " ÍïÑa" 400 -
+[10/Jul/2019 08:11:45] code 400, message Bad request syntax ('\x03\x00\x00\x16\x11à\x00\x00\x00\x0e\x00Á\x02\x01\x00Â\x02\x02\x00À\x01')
+[10/Jul/2019 08:11:45] "  à    Á Â À" 400 -
+[10/Jul/2019 08:11:50] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00ò\x00Á\x02\x01\x00Â\x02\x02\x00')
+[10/Jul/2019 08:11:50] "  à   ò Á Â " 400 -
+[10/Jul/2019 08:11:55] code 400, message Bad request syntax ('\x00\x00\x00\x00\x00\x06\x00\x01\x00\x00\x00\x01')
+[10/Jul/2019 08:11:55] "         " 400 -
+[10/Jul/2019 08:12:00] code 400, message Bad request syntax ('h\x04C\x00\x00\x00')
+[10/Jul/2019 08:12:00] "hC   " 400 -
+[10/Jul/2019 08:12:06] code 400, message Bad request syntax ('c\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ÁÞ¾Ñ\x00\x00\x00\x00')
+[10/Jul/2019 08:12:06] "c               ÁÞ¾Ñ    " 400 -
+[10/Jul/2019 08:12:11] code 400, message Bad request syntax ('\x00\x04\x01+\x1b\x00')
+[10/Jul/2019 08:12:11] " + " 400 -
+[10/Jul/2019 08:12:12] code 400, message Bad request syntax ('fox a 1 -1 fox hello')
+[10/Jul/2019 08:12:12] "fox a 1 -1 fox hello" 400 -
+[10/Jul/2019 08:12:17] code 400, message Bad request syntax ('\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[10/Jul/2019 08:12:17] "                                                        " 400 -
+[10/Jul/2019 08:12:23] code 400, message Bad HTTP/0.9 request type ('FINS\x00\x00\x00')
+[10/Jul/2019 08:12:23] "FINS               " 400 -
+[10/Jul/2019 08:12:28] code 400, message Bad HTTP/0.9 request type ('\x01\x01\x00\x1a\x00\x00\x00\x00\x124\x00\x03\x00')
+[10/Jul/2019 08:12:28] "     4  IBETH01N0_M " 400 -
+[10/Jul/2019 08:12:33] code 400, message Bad HTTP/0.9 request type ('Ì\x01\x00')
+[10/Jul/2019 08:12:33] "Ì @  Gî" 400 -
+[10/Jul/2019 08:12:33] code 400, message Bad HTTP/0.9 request type ('W\x00\x00\x00\x00\x11\x11\x07\x00\x00ÿÿ\x03\x00\x00þ\x03\x00\x00\x14\x00')
+[10/Jul/2019 08:12:33] "W      ÿÿ  þ   " 400 -
+[10/Jul/2019 08:12:38] code 400, message Bad request syntax ('»»\x01\x00\x00\x00\x01')
+[10/Jul/2019 08:12:38] "»»   " 400 -
+[10/Jul/2019 08:12:44] code 400, message Bad request syntax ('»»\x01\x00\x00\x01\x01')
+[10/Jul/2019 08:12:44] "»»  " 400 -
+[10/Jul/2019 08:12:49] code 400, message Bad HTTP/0.9 request type ('\x01\x00\x00\x00\x00\x01\x00')
+[10/Jul/2019 08:12:49] "       N " 400 -
+[10/Jul/2019 08:12:55] code 400, message Bad HTTP/0.9 request type ('HELF>\x00\x00\x00\x00\x00\x00\x00ÿÿ\x00\x00ÿÿ\x00\x00Àÿ?\x00\x00\x00\x00\x00')
+[10/Jul/2019 08:12:55] "HELF>       ÿÿ  ÿÿ  Àÿ?        opc.tcp://202.102.11.211:4840/" 400 -
+[10/Jul/2019 08:13:00] code 400, message Bad HTTP/0.9 request type ('HELF>\x00\x00\x00\x00\x00\x00\x00ÿÿ\x00\x00ÿÿ\x00\x00Àÿ?\x00\x00\x00\x00\x00')
+[10/Jul/2019 08:13:00] "HELF>       ÿÿ  ÿÿ  Àÿ?        opc.tcp://202.102.11.211:4845/" 400 -
+[10/Jul/2019 08:13:05] code 400, message Bad HTTP/0.9 request type ('HELF>\x00\x00\x00\x00\x00\x00\x00ÿÿ\x00\x00ÿÿ\x00\x00Àÿ?\x00\x00\x00\x00\x00')
+[10/Jul/2019 08:13:05] "HELF>       ÿÿ  ÿÿ  Àÿ?        opc.tcp://202.102.11.211:53530/" 400 -
+[10/Jul/2019 08:13:11] code 400, message Bad request syntax ('\xa0\x01\x00`\x00\x00\x00\x00Ä£¯H\x99V¶´Ä£¯H\x99V¶´\x04\x02\x00\x01\x00\x00¡ª')
+[10/Jul/2019 08:13:11] "  `    Ä£¯HV¶´Ä£¯HV¶´   ¡ª" 400 -
+[10/Jul/2019 08:13:16] code 400, message Bad request syntax ('\x00|\x03\x06\x00\x82\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x9d/\x1fÉöAÞ½m&\x89ç§\x89lXJ\x08ÿ¸&¾<"½¹L5\x03\xad_gbéÜ\x9d\x01\x8bºùFð-ó\x9ao\x86¬lGT~xÕÐØI\x0bxIü\x1dùÚH}R\x00\x00u0\x00\x00ê`\x00\x00\x02X\x00\x00\x00ú\x00\x00u0\x00\x00\x00\x01S`\tt\x0b\x06Ò¾ÿ¨PCM¦\x9bè')
+[10/Jul/2019 08:13:16] " |           /ÉöAÞ½m&ç§lXJÿ¸&¾<"½¹L5­_gbéÜºùFð-óo¬lGT~xÕÐØIxIüùÚH}R  u0  ê`  X   ú  u0   S`	tÒ¾ÿ¨PCM¦è" 400 -
+[10/Jul/2019 08:13:16] code 400, message Bad request syntax ('\x01I20100')
+[10/Jul/2019 08:13:16] "I20100" 400 -
+[10/Jul/2019 08:13:21] code 400, message Bad request syntax ('{\x01\x00\x1613955555555\x7f\x00\x00U\x13¥{')
+[10/Jul/2019 08:13:21] "{ 13955555555  U¥{" 400 -
+[10/Jul/2019 08:13:51] code 400, message Bad HTTP/0.9 request type ('\x80\x00\x00(\x05Ç\x17Â\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86')
+[10/Jul/2019 08:13:51] "  (ÇÂ                                " 400 -
+----------------------------------------
+Exception happened during processing of request from ('194.156.126.18', 1533)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('92.118.161.13', 58724)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[10/Jul/2019 17:28:57] "POST /get_verdict/ HTTP/1.1" 200 17825
+[10/Jul/2019 17:29:17] "POST /get_verdict/ HTTP/1.1" 200 13374
+[10/Jul/2019 17:29:34] "POST /get_verdict/ HTTP/1.1" 200 13374
+[10/Jul/2019 17:29:45] "POST /get_verdict/ HTTP/1.1" 200 715611
+[10/Jul/2019 17:29:53] "POST /get_verdict/ HTTP/1.1" 200 235821
+[10/Jul/2019 17:31:22] "POST /search_prisoner/ HTTP/1.1" 200 36
+[10/Jul/2019 17:31:47] "POST /get_graph_data/ HTTP/1.1" 200 245048
+[10/Jul/2019 17:32:00] "POST /get_graph_data/ HTTP/1.1" 200 26631
+[10/Jul/2019 17:41:12] "POST /get_verdict/ HTTP/1.1" 200 46583
+[10/Jul/2019 17:41:21] "POST /get_verdict/ HTTP/1.1" 200 5456
+[10/Jul/2019 17:41:33] "POST /get_verdict/ HTTP/1.1" 200 5456
+[10/Jul/2019 17:41:39] "POST /get_verdict/ HTTP/1.1" 200 12221
+[10/Jul/2019 17:51:10] "POST /search_prisoner/ HTTP/1.1" 200 124
+[10/Jul/2019 17:51:15] "POST /get_graph_data/ HTTP/1.1" 200 11391
+[10/Jul/2019 17:58:50] "POST /get_verdict/ HTTP/1.1" 200 22506
+[10/Jul/2019 18:27:26] "POST /get_verdict/ HTTP/1.1" 200 20176
+[10/Jul/2019 22:28:24] "POST /get_verdict/ HTTP/1.1" 200 22506
+[10/Jul/2019 22:29:02] "POST /get_verdict/ HTTP/1.1" 200 18735
+[10/Jul/2019 22:30:54] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/css/all.min.css HTTP/1.1" 200 55967
+[10/Jul/2019 22:30:54] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js.map HTTP/1.1" 404 1779
+[10/Jul/2019 22:30:54] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 140421
+[10/Jul/2019 22:30:54] "GET /static/assets/libs/css/style.css HTTP/1.1" 200 126641
+[10/Jul/2019 22:30:54] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1776
+[10/Jul/2019 22:31:03] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js.map HTTP/1.1" 404 1779
+[10/Jul/2019 22:31:03] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css.map HTTP/1.1" 404 1776
+[10/Jul/2019 22:31:15] "GET /graph/ HTTP/1.1" 200 16632
+Not Found: /favicon.ico
+[10/Jul/2019 22:31:15] "GET /favicon.ico HTTP/1.1" 404 2942
+[10/Jul/2019 22:31:56] "GET /graph/ HTTP/1.1" 200 16632
+[10/Jul/2019 22:31:56] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 75440
+[10/Jul/2019 22:31:56] "GET /static/assets/vendor/fonts/circular-std/CircularStd-Medium.woff HTTP/1.1" 200 40840
+[10/Jul/2019 22:31:56] "GET /static/js/graph.js HTTP/1.1" 200 13581
+[10/Jul/2019 22:31:56] "GET /static/assets/vendor/slimscroll/jquery.slimscroll.js HTTP/1.1" 200 13831
+[10/Jul/2019 22:31:56] "GET /static/assets/vendor/jquery/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[10/Jul/2019 22:31:57] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js HTTP/1.1" 200 210612
+[10/Jul/2019 22:36:14] "POST /search_prisoner/ HTTP/1.1" 200 124
+[10/Jul/2019 22:36:27] "POST /get_graph_data/ HTTP/1.1" 200 11391
+[10/Jul/2019 22:36:36] "POST /get_verdict/ HTTP/1.1" 200 22506
+[10/Jul/2019 23:44:03] "POST /get_shortest_path/ HTTP/1.1" 200 29047
+[10/Jul/2019 23:45:51] "POST /get_verdict/ HTTP/1.1" 200 9887
+[11/Jul/2019 00:19:05] "GET / HTTP/1.1" 302 0
+[11/Jul/2019 00:19:05] "GET /graph/ HTTP/1.1" 200 16632
+----------------------------------------
+Exception happened during processing of request from ('141.98.81.34', 359)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[11/Jul/2019 17:30:51] "GET /graph/ HTTP/1.1" 200 16632
+[11/Jul/2019 17:30:51] "GET /static/assets/vendor/fonts/circular-std/style.css HTTP/1.1" 304 0
+[11/Jul/2019 17:30:51] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 140421
+[11/Jul/2019 17:30:51] "GET /static/assets/libs/css/style.css HTTP/1.1" 200 126641
+[11/Jul/2019 17:30:51] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/css/all.min.css HTTP/1.1" 200 55967
+[11/Jul/2019 17:30:51] "GET /static/js/graph.js HTTP/1.1" 200 13581
+[11/Jul/2019 17:30:52] "GET /static/assets/vendor/jquery/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[11/Jul/2019 17:30:52] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js HTTP/1.1" 200 210612
+[11/Jul/2019 17:30:52] "GET /static/assets/vendor/slimscroll/jquery.slimscroll.js HTTP/1.1" 200 13831
+[11/Jul/2019 17:30:52] "GET /static/assets/libs/js/main-js.js HTTP/1.1" 304 0
+[11/Jul/2019 17:30:53] "GET /static/assets/vendor/fonts/circular-std/CircularStd-Medium.woff HTTP/1.1" 200 40840
+[11/Jul/2019 17:30:53] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 75440
+[11/Jul/2019 17:52:20] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+[11/Jul/2019 17:52:20] "  +&à     Cookie: mstshash=hello" 400 -
+[11/Jul/2019 18:28:45] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+[11/Jul/2019 18:28:45] "  +&à     Cookie: mstshash=hello" 400 -
+[11/Jul/2019 19:07:44] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+[11/Jul/2019 19:07:44] "  +&à     Cookie: mstshash=hello" 400 -
+[11/Jul/2019 21:42:35] code 400, message Bad HTTP/0.9 request type ('\x04\x01\x00\x19¼}I')
+[11/Jul/2019 21:42:35] " ¼}I " 400 -
+[2019-07-11 21:42:35,766] - Broken pipe from ('163.172.106.112', 54578)
+
+[11/Jul/2019 21:43:36] code 400, message Bad request syntax ('\x05\x01\x00')
+[11/Jul/2019 21:43:36] " " 400 -
+[2019-07-11 21:43:36,085] - Broken pipe from ('163.172.106.112', 45574)
+
+[12/Jul/2019 01:11:21] "GET / HTTP/1.1" 302 0
+[12/Jul/2019 01:11:22] "GET /graph/ HTTP/1.1" 200 16632
+[12/Jul/2019 01:12:00] "POST /search_prisoner/ HTTP/1.1" 200 124
+[12/Jul/2019 01:12:06] "POST /get_graph_data/ HTTP/1.1" 200 11391
+[12/Jul/2019 01:12:06] "GET /static/assets/images/down-arrow.png HTTP/1.1" 304 0
+[12/Jul/2019 01:12:29] "POST /get_graph_data/ HTTP/1.1" 200 30217
+[12/Jul/2019 01:52:07] "POST /get_verdict/ HTTP/1.1" 200 12153
+[12/Jul/2019 01:56:43] "POST /get_verdict/ HTTP/1.1" 200 22506
+[12/Jul/2019 01:57:30] "POST /get_verdict/ HTTP/1.1" 200 20176
+[12/Jul/2019 03:36:47] "GET / HTTP/1.1" 302 0
+----------------------------------------
+Exception happened during processing of request from ('198.108.67.48', 25558)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 171, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+----------------------------------------
+Exception happened during processing of request from ('92.118.160.21', 64642)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[12/Jul/2019 10:22:11] code 400, message Bad request syntax ('\x05\x02\x00\x02')
+[12/Jul/2019 10:22:11] " " 400 -
+[12/Jul/2019 10:22:11] code 400, message Bad request syntax ('\x05\x02\x00\x02')
+[12/Jul/2019 10:22:11] " " 400 -
+[12/Jul/2019 12:47:16] code 400, message Bad request syntax ('#ST')
+[12/Jul/2019 12:47:16] "#ST" 400 -
+[12/Jul/2019 12:47:17] code 400, message Bad HTTP/0.9 request type ('\x00')
+[12/Jul/2019 12:47:17] " n    beio" 400 -
+[2019-07-12 12:47:17,909] - Broken pipe from ('45.56.79.13', 38802)
+
+[12/Jul/2019 12:47:19] code 400, message Bad request syntax ('\x00\x00\x07\x00\x08\x00\x03\x00\x04\x00\x05\x00\x06')
+[12/Jul/2019 12:47:19] "       " 400 -
+[2019-07-12 12:47:19,595] - Broken pipe from ('45.56.79.13', 39056)
+
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Jul/2019 12:47:20] "GET / HTTP/1.0" 400 58324
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Jul/2019 12:47:20] "OPTIONS / HTTP/1.0" 400 58352
+[12/Jul/2019 12:47:21] code 400, message Bad request version ('RTSP/1.0')
+[12/Jul/2019 12:47:21] "OPTIONS / RTSP/1.0" 400 -
+[12/Jul/2019 12:47:22] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[12/Jul/2019 12:47:22] "  (rþ          |                    " 400 -
+[2019-07-12 12:47:22,967] - Broken pipe from ('45.56.79.13', 39596)
+
+[12/Jul/2019 12:47:24] code 400, message Bad HTTP/0.9 request type ('\x00')
+[12/Jul/2019 12:47:24] "          versionbind   " 400 -
+[2019-07-12 12:47:24,668] - Broken pipe from ('45.56.79.13', 39846)
+
+[12/Jul/2019 12:47:26] code 400, message Bad HTTP/0.9 request type ('\x00')
+[12/Jul/2019 12:47:26] "            " 400 -
+[2019-07-12 12:47:26,336] - Broken pipe from ('45.56.79.13', 40062)
+
+[12/Jul/2019 12:47:26] code 400, message Bad request syntax ('HELP')
+[12/Jul/2019 12:47:26] "HELP" 400 -
+[12/Jul/2019 12:47:26] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[12/Jul/2019 12:47:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Jul/2019 12:47:27] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00*%à\x00\x00\x00\x00\x00Cookie:')
+[12/Jul/2019 12:47:27] "  *%à     Cookie: mstshash=beio" 400 -
+[12/Jul/2019 12:47:27] code 400, message Bad request version ('\x00/\x00')
+[12/Jul/2019 12:47:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Jul/2019 12:47:28] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+[12/Jul/2019 12:47:28] "   qjn0k¡¢" 400 -
+[12/Jul/2019 12:47:29] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[12/Jul/2019 12:47:29] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[2019-07-12 12:47:29,900] - Broken pipe from ('45.56.79.13', 40612)
+
+[12/Jul/2019 12:47:31] code 400, message Bad HTTP/0.9 request type ('l\x00')
+[12/Jul/2019 12:47:31] "l          " 400 -
+[2019-07-12 12:47:31,581] - Broken pipe from ('45.56.79.13', 40840)
+
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Jul/2019 12:47:31] "GET / HTTP/1.0" 400 58328
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /nice ports,/Trinity.txt.bak
+[12/Jul/2019 12:47:31] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 400 58633
+[12/Jul/2019 12:47:32] code 400, message Bad request syntax ('\x01default')
+[12/Jul/2019 12:47:32] "default" 400 -
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /
+[12/Jul/2019 12:47:32] "OPTIONS / HTTP/1.0" 400 58356
+[12/Jul/2019 12:47:32] code 400, message Bad request syntax ('0\x84\x00\x00\x00-\x02\x01\x07c\x84\x00\x00\x00$\x04\x00')
+[12/Jul/2019 12:47:32] "0   -c   $ " 400 -
+[12/Jul/2019 12:47:33] code 400, message Bad request version ('RTSP/1.0')
+[12/Jul/2019 12:47:33] "OPTIONS / RTSP/1.0" 400 -
+[12/Jul/2019 12:47:34] code 400, message Bad HTTP/0.9 request type ('0')
+[12/Jul/2019 12:47:34] "0`  " 400 -
+[2019-07-12 12:47:34,499] - Broken pipe from ('45.56.79.13', 41284)
+
+[12/Jul/2019 12:47:34] code 400, message Bad request version ('SIP/2.0')
+[12/Jul/2019 12:47:34] "OPTIONS sip:nm SIP/2.0" 400 -
+[12/Jul/2019 12:47:36] code 400, message Bad request syntax ('TNMP\x04\x00\x00\x00TNME\x00\x00\x04\x00')
+[12/Jul/2019 12:47:36] "TNMP   TNME   " 400 -
+[2019-07-12 12:47:36,570] - Broken pipe from ('45.56.79.13', 41602)
+
+[12/Jul/2019 12:47:38] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+[12/Jul/2019 12:47:38] "  à     " 400 -
+[2019-07-12 12:47:38,265] - Broken pipe from ('45.56.79.13', 41898)
+
+[12/Jul/2019 12:47:38] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[12/Jul/2019 12:47:38] "  (rþ          |                    " 400 -
+[12/Jul/2019 12:47:39] code 400, message Bad request syntax ('DmdT\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x00\x11\x11\x00ÿ\x01ÿ\x13')
+[12/Jul/2019 12:47:39] "DmdT           ÿÿ" 400 -
+[2019-07-12 12:47:39,965] - Broken pipe from ('45.56.79.13', 42168)
+
+[12/Jul/2019 12:47:41] code 400, message Bad HTTP/0.9 request type (':\x00\x00\x00/\x00\x00\x00\x02\x00\x00@\x02\x0f\x00\x01\x00=\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00@')
+[12/Jul/2019 12:47:41] ":   /     @  =            /         @                 " 400 -
+[2019-07-12 12:47:41,637] - Broken pipe from ('45.56.79.13', 42422)
+
+[12/Jul/2019 12:47:43] code 400, message Bad request syntax ('JRMI\x00\x02K')
+[12/Jul/2019 12:47:43] "JRMI K" 400 -
+[2019-07-12 12:47:43,328] - Broken pipe from ('45.56.79.13', 42834)
+
+[12/Jul/2019 12:47:44] code 400, message Bad HTTP/0.9 request type ('\x00')
+[12/Jul/2019 12:47:44] "          versionbind   " 400 -
+[12/Jul/2019 12:47:44] code 400, message Bad request syntax ('\x01\x00\x00ýÎú\x0b°\xa0\x00\x00\x00MMS\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x03\x00ðððð\x0b\x00\x04\x00\x1c\x00\x03\x00N\x00S\x00P\x00l\x00a\x00y\x00e\x00r\x00/\x009\x00.\x00\x00.\x00\x00.\x02\x009\x008\x00\x00;\x00 \x00{\x00\x00\x00\x00\x00A\x00A\x00\x00\x00-\x00\x00A\x00\x00\x00-\x00\x00\x00a\x00\x00-\x00A\x00A\x00\x00A\x00-\x00\x00\x00\x00\x00A\x00\x00A\x00A\x00\x00A\x00A\x00\x00}\x00\x00\x00àmß_')
+[12/Jul/2019 12:47:44] "  ýÎú°    MMS                    ðððð    N S P l a y e r / 9 .  .  . 9 8  ;   {     A A   -  A   -   a  - A A  A -     A  A A  A A  }   àmß_" 400 -
+[2019-07-12 12:47:44,993] - Broken pipe from ('45.56.79.13', 43152)
+
+[12/Jul/2019 12:47:46] code 400, message Bad HTTP/0.9 request type ('\x00Z\x00\x00\x01\x00\x00\x00\x016\x01,\x00\x00\x08\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00')
+[12/Jul/2019 12:47:46] " Z     6,   ÿ      :               æ           (CONNECT_DATA=(COMMAND=version))" 400 -
+[2019-07-12 12:47:46,683] - Broken pipe from ('45.56.79.13', 43434)
+
+[12/Jul/2019 12:47:48] code 400, message Bad request version ('\x03\x00(\x00\x04ÿ\x08\x00\x01U\x00\x00\x00MSSQLServer\x00H\x0f\x00\x00')
+[12/Jul/2019 12:47:48] " 4            ( ÿ U   MSSQLServer H  " 400 -
+[2019-07-12 12:47:48,352] - Broken pipe from ('45.56.79.13', 43714)
+
+[12/Jul/2019 12:47:49] code 400, message Bad HTTP/0.9 request type ('\x00')
+[12/Jul/2019 12:47:49] "            " 400 -
+[12/Jul/2019 12:47:49] code 400, message Bad request syntax ('HELP')
+[12/Jul/2019 12:47:49] "HELP" 400 -
+[12/Jul/2019 12:47:50] code 400, message Bad request syntax ('\x00\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x0f\x00')
+[12/Jul/2019 12:47:50] "              " 400 -
+[2019-07-12 12:47:50,034] - Broken pipe from ('45.56.79.13', 44070)
+
+[12/Jul/2019 12:47:50] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[12/Jul/2019 12:47:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Jul/2019 12:47:50] code 400, message Bad request version ('\x00/\x00')
+[12/Jul/2019 12:47:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[12/Jul/2019 12:47:51] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+[12/Jul/2019 12:47:51] "   qjn0k¡¢" 400 -
+[12/Jul/2019 12:47:51] code 400, message Bad request syntax ('GIOP\x01\x00\x01\x00$\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x06\x00\x00\x00abcdef\x00\x00\x04\x00\x00\x00get\x00\x00\x00\x00\x00')
+[12/Jul/2019 12:47:51] "GIOP  $                abcdef     get     " 400 -
+[2019-07-12 12:47:51,723] - Broken pipe from ('45.56.79.13', 44420)
+
+[12/Jul/2019 12:47:53] code 400, message Bad request syntax ('\x00\x9c\x00\x01\x1a+<M\x00\x01\x00\x00\x01\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01ÿÿ\x00\x01none\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00beio\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[12/Jul/2019 12:47:53] "  +<M            ÿÿ none                                                            beio                                                            " 400 -
+[2019-07-12 12:47:53,414] - Broken pipe from ('45.56.79.13', 44738)
+
+[12/Jul/2019 12:47:55] code 400, message Bad request syntax ('\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x04\x00\x00\x00\x08\x00\x00\x00\x01\x00\x00\x00\x00')
+[12/Jul/2019 12:47:55] "                   " 400 -
+[2019-07-12 12:47:55,098] - Broken pipe from ('45.56.79.13', 45068)
+
+[12/Jul/2019 12:47:56] code 400, message Bad request syntax ('\x03\x81\x00\x00\x00\x00\x00_@\x00\x017\x00\x00\x00\x00\x00\x00\x00\x01\x00\x01\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00InitiatorName=iqn.1991-05.com.microsoft:beio-iscsi-probe\x00SessionType=Discovery\x00AuthMethod=None\x00\x00')
+[12/Jul/2019 12:47:56] "     _@ 7                                InitiatorName=iqn.1991-05.com.microsoft:beio-iscsi-probe SessionType=Discovery AuthMethod=None  " 400 -
+[2019-07-12 12:47:56,787] - Broken pipe from ('45.56.79.13', 45482)
+
+[12/Jul/2019 12:47:56] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[12/Jul/2019 12:47:56] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[12/Jul/2019 12:47:58] code 400, message Bad request syntax ('\x01\x00\x00\x00\x00Í\x00\x01\x00\x00ANY-SCP\x00\x00\x00\x00\x00\x00\x00\x00\x00FINDSCU\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x10\x00\x00\x151.2.840.10008.3.1.1.1 \x00\x00.\x01\x00\x00\x000\x00\x00\x111.2.840.10008.1.1@\x00\x00\x111.2.840.10008.1.2P\x00\x00:Q\x00\x00\x04\x00\x00@\x00R\x00\x00\x1e1.2.826.0.1.3680043.2.1396.999U\x00\x00\x0cCharruaVista')
+[12/Jul/2019 12:47:58] "    Í   ANY-SCP         FINDSCU                                           1.2.840.10008.3.1.1.1   .   0  1.2.840.10008.1.1@  1.2.840.10008.1.2P  :Q    @ R  1.2.826.0.1.3680043.2.1396.999U  CharruaVista" 400 -
+[2019-07-12 12:47:58,461] - Broken pipe from ('45.56.79.13', 45786)
+
+[12/Jul/2019 12:48:02] code 400, message Bad HTTP/0.9 request type ('l\x00')
+[12/Jul/2019 12:48:02] "l          " 400 -
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /nice ports,/Trinity.txt.bak
+[12/Jul/2019 12:48:02] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 400 58637
+[12/Jul/2019 12:48:03] code 400, message Bad request syntax ('\x01default')
+[12/Jul/2019 12:48:03] "default" 400 -
+[12/Jul/2019 12:48:03] code 400, message Bad request syntax ('0\x84\x00\x00\x00-\x02\x01\x07c\x84\x00\x00\x00$\x04\x00')
+[12/Jul/2019 12:48:03] "0   -c   $ " 400 -
+[12/Jul/2019 12:48:09] code 400, message Bad HTTP/0.9 request type ('0')
+[12/Jul/2019 12:48:09] "0`  " 400 -
+[12/Jul/2019 12:48:09] code 400, message Bad request version ('SIP/2.0')
+[12/Jul/2019 12:48:09] "OPTIONS sip:nm SIP/2.0" 400 -
+[12/Jul/2019 12:48:15] code 400, message Bad request syntax ('TNMP\x04\x00\x00\x00TNME\x00\x00\x04\x00')
+[12/Jul/2019 12:48:15] "TNMP   TNME   " 400 -
+[12/Jul/2019 12:48:20] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+[12/Jul/2019 12:48:20] "  à     " 400 -
+[12/Jul/2019 12:48:25] code 400, message Bad request syntax ('DmdT\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x00\x11\x11\x00ÿ\x01ÿ\x13')
+[12/Jul/2019 12:48:25] "DmdT           ÿÿ" 400 -
+[12/Jul/2019 12:48:31] code 400, message Bad HTTP/0.9 request type (':\x00\x00\x00/\x00\x00\x00\x02\x00\x00@\x02\x0f\x00\x01\x00=\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00@')
+[12/Jul/2019 12:48:31] ":   /     @  =            /         @                 " 400 -
+[12/Jul/2019 12:48:36] code 400, message Bad request syntax ('JRMI\x00\x02K')
+[12/Jul/2019 12:48:36] "JRMI K" 400 -
+[12/Jul/2019 12:48:41] code 400, message Bad request syntax ('\x01\x00\x00ýÎú\x0b°\xa0\x00\x00\x00MMS\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x03\x00ðððð\x0b\x00\x04\x00\x1c\x00\x03\x00N\x00S\x00P\x00l\x00a\x00y\x00e\x00r\x00/\x009\x00.\x000\x00.\x000\x00.\x002\x009\x008\x000\x00;\x00 \x00{\x000\x000\x000\x000\x00A\x00A\x000\x000\x00-\x000\x00A\x000\x000\x00-\x000\x000\x00a\x000\x00-\x00A\x00A\x000\x00A\x00-\x000\x000\x000\x000\x00A\x000\x00A\x00A\x000\x00A\x00A\x000\x00}\x00\x00\x00àmß_')
+[12/Jul/2019 12:48:41] "  ýÎú°    MMS                    ðððð    N S P l a y e r / 9 . 0 . 0 . 2 9 8 0 ;   { 0 0 0 0 A A 0 0 - 0 A 0 0 - 0 0 a 0 - A A 0 A - 0 0 0 0 A 0 A A 0 A A 0 }   àmß_" 400 -
+[12/Jul/2019 12:48:47] code 400, message Bad HTTP/0.9 request type ('\x00Z\x00\x00\x01\x00\x00\x00\x016\x01,\x00\x00\x08\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00')
+[12/Jul/2019 12:48:47] " Z     6,   ÿ      :                4æ           (CONNECT_DATA=(COMMAND=version))" 400 -
+[12/Jul/2019 12:48:52] code 400, message Bad request syntax ('\x00\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x0f\x00')
+[12/Jul/2019 12:48:52] "              " 400 -
+[12/Jul/2019 12:48:57] code 400, message Bad request syntax ('GIOP\x01\x00\x01\x00$\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x01\x00\x00\x00\x06\x00\x00\x00abcdef\x00\x00\x04\x00\x00\x00get\x00\x00\x00\x00\x00')
+[12/Jul/2019 12:48:57] "GIOP  $                abcdef     get     " 400 -
+[12/Jul/2019 12:50:42] code 400, message Bad request syntax ('\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[12/Jul/2019 12:50:42] "                        " 400 -
+[12/Jul/2019 12:50:52] code 400, message Bad HTTP/0.9 request type ('\x80\x00\x00(F\x82<Ô\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86')
+[12/Jul/2019 12:50:52] "  (F<Ô                                " 400 -
+[15/Jul/2019 04:52:01] "GET / HTTP/1.1" 302 0
+[15/Jul/2019 04:52:02] "GET /graph/ HTTP/1.1" 200 16632
+[16/Jul/2019 08:37:02] code 400, message Bad request syntax ('SSH-2.0-Go')
+[16/Jul/2019 08:37:02] "SSH-2.0-Go" 400 -
+[17/Jul/2019 17:42:06] "GET / HTTP/1.1" 302 0
+[17/Jul/2019 17:42:06] "GET /graph/ HTTP/1.1" 200 16632
+[17/Jul/2019 17:42:06] "GET /static/assets/vendor/fonts/circular-std/style.css HTTP/1.1" 200 1512
+[17/Jul/2019 17:42:07] "GET /static/assets/libs/css/style.css HTTP/1.1" 200 126641
+[17/Jul/2019 17:42:07] "GET /static/assets/vendor/bootstrap/css/bootstrap.min.css HTTP/1.1" 200 140421
+[17/Jul/2019 17:42:07] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/css/all.min.css HTTP/1.1" 200 55967
+[17/Jul/2019 17:42:07] "GET /static/js/graph.js HTTP/1.1" 200 13581
+[17/Jul/2019 17:42:07] "GET /static/assets/vendor/jquery/jquery-3.3.1.min.js HTTP/1.1" 200 86927
+[17/Jul/2019 17:42:07] "GET /static/assets/vendor/slimscroll/jquery.slimscroll.js HTTP/1.1" 200 13831
+[17/Jul/2019 17:42:07] "GET /static/assets/vendor/bootstrap/js/bootstrap.bundle.js HTTP/1.1" 200 210612
+[17/Jul/2019 17:42:08] "GET /static/assets/vendor/fonts/fontawesome-free-5.9.0-web/webfonts/fa-solid-900.woff2 HTTP/1.1" 200 75440
+[17/Jul/2019 17:42:08] "GET /static/assets/vendor/fonts/circular-std/CircularStd-Medium.woff HTTP/1.1" 200 40840
+[17/Jul/2019 17:42:08] "GET /static/assets/libs/js/main-js.js HTTP/1.1" 200 4076
+[17/Jul/2019 17:42:09] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+[17/Jul/2019 17:43:54] "POST /search_prisoner/ HTTP/1.1" 200 124
+[17/Jul/2019 17:44:11] "POST /get_graph_data/ HTTP/1.1" 200 124773
+[17/Jul/2019 17:44:12] "GET /static/assets/images/down-arrow.png HTTP/1.1" 200 1015
+[17/Jul/2019 17:44:25] "POST /get_graph_data/ HTTP/1.1" 200 11391
+[17/Jul/2019 17:44:45] "POST /get_graph_data/ HTTP/1.1" 200 11391
+[17/Jul/2019 17:48:19] "POST /get_graph_data/ HTTP/1.1" 200 30217
+[17/Jul/2019 17:49:13] "POST /get_graph_data/ HTTP/1.1" 200 30217
+[17/Jul/2019 17:51:23] "POST /get_graph_data/ HTTP/1.1" 200 11391
+[17/Jul/2019 21:45:11] "POST /get_verdict/ HTTP/1.1" 200 15105
+[17/Jul/2019 21:45:11] "POST /get_verdict/ HTTP/1.1" 200 23782
+[17/Jul/2019 21:45:11] "POST /get_verdict/ HTTP/1.1" 200 15105
+[17/Jul/2019 21:45:11] "POST /get_verdict/ HTTP/1.1" 200 23782
+[17/Jul/2019 21:45:11] "POST /get_verdict/ HTTP/1.1" 200 23782
+[17/Jul/2019 21:45:11] "POST /get_verdict/ HTTP/1.1" 200 23782
+[17/Jul/2019 21:45:14] "POST /get_verdict/ HTTP/1.1" 200 23782
+[17/Jul/2019 21:45:14] "POST /get_verdict/ HTTP/1.1" 200 23782
+[17/Jul/2019 22:22:20] "POST /get_verdict/ HTTP/1.1" 200 5566
+[17/Jul/2019 22:22:21] "GET /graph/ HTTP/1.1" 200 16632
+[17/Jul/2019 22:22:21] "GET /static/favicon/favicon.ico HTTP/1.1" 200 1123
+[17/Jul/2019 22:22:31] "POST /search_prisoner/ HTTP/1.1" 200 124
+[17/Jul/2019 22:22:35] "POST /get_graph_data/ HTTP/1.1" 200 11391
+[17/Jul/2019 22:22:43] "POST /get_verdict/ HTTP/1.1" 200 23782
+----------------------------------------
+Exception happened during processing of request from ('185.173.35.33', 57436)
+Traceback (most recent call last):
+  File "/usr/lib/python3.6/socketserver.py", line 654, in process_request_thread
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.6/socketserver.py", line 364, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.6/socketserver.py", line 724, in __init__
+    self.handle()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 169, in handle
+    self.handle_one_request()
+  File "/home/law/env/law_django/lib/python3.6/site-packages/django/core/servers/basehttp.py", line 179, in handle_one_request
+    self.raw_requestline = self.rfile.readline(65537)
+  File "/usr/lib/python3.6/socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+ConnectionResetError: [Errno 104] Connection reset by peer
+----------------------------------------
+[19/Jul/2019 03:07:00] code 400, message Bad request syntax ('\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[19/Jul/2019 03:07:00] "                        " 400 -
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Jul/2019 03:07:00] "GET / HTTP/1.0" 400 58326
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /
+[19/Jul/2019 03:07:00] "OPTIONS / HTTP/1.0" 400 58354
+[19/Jul/2019 03:07:00] code 400, message Bad request version ('RTSP/1.0')
+[19/Jul/2019 03:07:00] "OPTIONS / RTSP/1.0" 400 -
+[19/Jul/2019 03:07:05] code 400, message Bad request version ('\x00\x01\x97|\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[19/Jul/2019 03:07:05] "  (rþ          |                    " 400 -
+[19/Jul/2019 03:07:10] code 400, message Bad HTTP/0.9 request type ('\x00')
+[19/Jul/2019 03:07:10] "          versionbind   " 400 -
+[19/Jul/2019 03:07:15] code 400, message Bad HTTP/0.9 request type ('\x00')
+[19/Jul/2019 03:07:15] "            " 400 -
+[19/Jul/2019 03:07:16] code 400, message Bad request syntax ('HELP')
+[19/Jul/2019 03:07:16] "HELP" 400 -
+[19/Jul/2019 03:07:16] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[19/Jul/2019 03:07:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[19/Jul/2019 03:07:16] code 400, message Bad request syntax ('\x00\x00\x00qj\x81n0\x81k¡\x03\x02\x01\x05¢\x03\x02\x01')
+[19/Jul/2019 03:07:16] "   qjn0k¡¢" 400 -
+[19/Jul/2019 03:07:21] code 400, message Bad request syntax ('\x00\x00\x00¤ÿSMBr\x00\x00\x00\x00\x08\x01@\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00@\x06\x00\x00\x01\x00\x00\x81\x00\x02PC NETWORK PROGRAM 1.0\x00\x02MICROSOFT NETWORKS 1.03\x00\x02MICROSOFT NETWORKS 3.0\x00\x02LANMAN1.0\x00\x02LM1.2X002\x00\x02Samba\x00\x02NT LANMAN 1.0\x00\x02NT LM 0.12\x00')
+[19/Jul/2019 03:07:21] "   ¤ÿSMBr    @              @     PC NETWORK PROGRAM 1.0 MICROSOFT NETWORKS 1.03 MICROSOFT NETWORKS 3.0 LANMAN1.0 LM1.2X002 Samba NT LANMAN 1.0 NT LM 0.12 " 400 -
+[19/Jul/2019 03:07:26] code 400, message Bad HTTP/0.9 request type ('l\x00')
+[19/Jul/2019 03:07:26] "l          " 400 -
+Invalid HTTP_HOST header: 'law:8000'. You may need to add 'law' to ALLOWED_HOSTS.
+Bad Request: /nice ports,/Trinity.txt.bak
+[19/Jul/2019 03:07:26] "GET /nice%20ports%2C/Tri%6Eity.txt%2ebak HTTP/1.0" 400 58635
+[19/Jul/2019 03:07:26] code 400, message Bad request syntax ('\x01default')
+[19/Jul/2019 03:07:26] "default" 400 -
+[19/Jul/2019 03:07:31] code 400, message Bad HTTP/0.9 request type ('0')
+[19/Jul/2019 03:07:31] "0`  " 400 -
+[19/Jul/2019 03:07:31] code 400, message Bad request version ('SIP/2.0')
+[19/Jul/2019 03:07:31] "OPTIONS sip:nm SIP/2.0" 400 -
+[19/Jul/2019 03:07:36] code 400, message Bad request syntax ('TNMP\x04\x00\x00\x00TNME\x00\x00\x04\x00')
+[19/Jul/2019 03:07:36] "TNMP   TNME   " 400 -
+[19/Jul/2019 03:07:41] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00')
+[19/Jul/2019 03:07:41] "  à     " 400 -
+[19/Jul/2019 03:07:46] code 400, message Bad request syntax ('DmdT\x00\x00\x00\x17\x00\x00\x00\x01\x00\x00\x00\x00\x11\x11\x00ÿ\x01ÿ\x13')
+[19/Jul/2019 03:07:46] "DmdT           ÿÿ" 400 -
+[19/Jul/2019 03:07:51] code 400, message Bad HTTP/0.9 request type (':\x00\x00\x00/\x00\x00\x00\x02\x00\x00@\x02\x0f\x00\x01\x00=\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00/\x00\x00\x00\x00\x00\x00\x00\x00\x00@')
+[19/Jul/2019 03:07:51] ":   /     @  =            /         @                 " 400 -
+[19/Jul/2019 03:07:56] code 400, message Bad request syntax ('\x01\x00\x00ýÎú\x0b°\xa0\x00\x00\x00MMS\x14\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x12\x00\x00\x00\x01\x00\x03\x00ðððð\x0b\x00\x04\x00\x1c\x00\x03\x00N\x00S\x00P\x00l\x00a\x00y\x00e\x00r\x00/\x009\x00.\x000\x00.\x000\x00.\x002\x009\x008\x000\x00;\x00 \x00{\x000\x000\x000\x000\x00A\x00A\x000\x000\x00-\x000\x00A\x000\x000\x00-\x000\x000\x00a\x000\x00-\x00A\x00A\x000\x00A\x00-\x000\x000\x000\x000\x00A\x000\x00A\x00A\x000\x00A\x00A\x000\x00}\x00\x00\x00àmß_')
+[19/Jul/2019 03:07:56] "  ýÎú°    MMS                    ðððð    N S P l a y e r / 9 . 0 . 0 . 2 9 8 0 ;   { 0 0 0 0 A A 0 0 - 0 A 0 0 - 0 0 a 0 - A A 0 A - 0 0 0 0 A 0 A A 0 A A 0 }   àmß_" 400 -
+[19/Jul/2019 03:08:01] code 400, message Bad HTTP/0.9 request type ('\x00Z\x00\x00\x01\x00\x00\x00\x016\x01,\x00\x00\x08\x00\x7fÿ\x7f\x08\x00\x00\x00\x01\x00')
+[19/Jul/2019 03:08:01] " Z     6,   ÿ      :                4æ           (CONNECT_DATA=(COMMAND=version))" 400 -
+[19/Jul/2019 03:08:06] code 400, message Bad request syntax ('\x00\x03\x00\x01\x00\x00\x00\x00\x00\x00\x00\x02\x00\x00\x00\x00\x0f\x00')
+[19/Jul/2019 03:08:06] "              " 400 -
+[19/Jul/2019 03:08:12] code 400, message Bad request syntax ('\x94\x00ÍïÑa\x91\x03')
+[19/Jul/2019 03:08:12] " ÍïÑa" 400 -
+[19/Jul/2019 03:08:12] code 400, message Bad request syntax ('\x03\x00\x00\x16\x11à\x00\x00\x00\x0e\x00Á\x02\x01\x00Â\x02\x02\x00À\x01')
+[19/Jul/2019 03:08:12] "  à    Á Â À" 400 -
+[19/Jul/2019 03:08:17] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00ò\x00Á\x02\x01\x00Â\x02\x02\x00')
+[19/Jul/2019 03:08:17] "  à   ò Á Â " 400 -
+[19/Jul/2019 03:08:22] code 400, message Bad request syntax ('\x00\x00\x00\x00\x00\x06\x00\x01\x00\x00\x00\x01')
+[19/Jul/2019 03:08:22] "         " 400 -
+[19/Jul/2019 03:08:27] code 400, message Bad request syntax ('h\x04C\x00\x00\x00')
+[19/Jul/2019 03:08:27] "hC   " 400 -
+[19/Jul/2019 03:08:32] code 400, message Bad request syntax ('c\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00ÁÞ¾Ñ\x00\x00\x00\x00')
+[19/Jul/2019 03:08:32] "c               ÁÞ¾Ñ    " 400 -
+[19/Jul/2019 03:08:37] code 400, message Bad request syntax ('\x00\x04\x01+\x1b\x00')
+[19/Jul/2019 03:08:37] " + " 400 -
+[19/Jul/2019 03:08:37] code 400, message Bad request syntax ('fox a 1 -1 fox hello')
+[19/Jul/2019 03:08:37] "fox a 1 -1 fox hello" 400 -
+[19/Jul/2019 03:08:42] code 400, message Bad request syntax ('\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[19/Jul/2019 03:08:42] "                                                        " 400 -
+[19/Jul/2019 03:08:47] code 400, message Bad HTTP/0.9 request type ('FINS\x00\x00\x00')
+[19/Jul/2019 03:08:47] "FINS               " 400 -
+[19/Jul/2019 03:08:52] code 400, message Bad HTTP/0.9 request type ('\x01\x01\x00\x1a\x00\x00\x00\x00\x124\x00\x03\x00')
+[19/Jul/2019 03:08:52] "     4  IBETH01N0_M " 400 -
+[19/Jul/2019 03:08:57] code 400, message Bad HTTP/0.9 request type ('Ì\x01\x00')
+[19/Jul/2019 03:08:57] "Ì @  Gî" 400 -
+[19/Jul/2019 03:08:57] code 400, message Bad HTTP/0.9 request type ('W\x00\x00\x00\x00\x11\x11\x07\x00\x00ÿÿ\x03\x00\x00þ\x03\x00\x00\x14\x00')
+[19/Jul/2019 03:08:57] "W      ÿÿ  þ   " 400 -
+[19/Jul/2019 03:09:02] code 400, message Bad request syntax ('»»\x01\x00\x00\x00\x01')
+[19/Jul/2019 03:09:02] "»»   " 400 -
+[19/Jul/2019 03:09:07] code 400, message Bad request syntax ('»»\x01\x00\x00\x01\x01')
+[19/Jul/2019 03:09:07] "»»  " 400 -
+[19/Jul/2019 03:09:12] code 400, message Bad HTTP/0.9 request type ('\x01\x00\x00\x00\x00\x01\x00')
+[19/Jul/2019 03:09:12] "       N " 400 -
+[19/Jul/2019 03:09:17] code 400, message Bad HTTP/0.9 request type ('HELF>\x00\x00\x00\x00\x00\x00\x00ÿÿ\x00\x00ÿÿ\x00\x00Àÿ?\x00\x00\x00\x00\x00')
+[19/Jul/2019 03:09:17] "HELF>       ÿÿ  ÿÿ  Àÿ?        opc.tcp://202.102.11.211:4840/" 400 -
+[19/Jul/2019 03:09:22] code 400, message Bad HTTP/0.9 request type ('HELF>\x00\x00\x00\x00\x00\x00\x00ÿÿ\x00\x00ÿÿ\x00\x00Àÿ?\x00\x00\x00\x00\x00')
+[19/Jul/2019 03:09:22] "HELF>       ÿÿ  ÿÿ  Àÿ?        opc.tcp://202.102.11.211:4845/" 400 -
+[19/Jul/2019 03:09:27] code 400, message Bad HTTP/0.9 request type ('HELF>\x00\x00\x00\x00\x00\x00\x00ÿÿ\x00\x00ÿÿ\x00\x00Àÿ?\x00\x00\x00\x00\x00')
+[19/Jul/2019 03:09:27] "HELF>       ÿÿ  ÿÿ  Àÿ?        opc.tcp://202.102.11.211:53530/" 400 -
+[19/Jul/2019 03:09:32] code 400, message Bad request syntax ('\xa0\x01\x00`\x00\x00\x00\x00Ä£¯H\x99V¶´Ä£¯H\x99V¶´\x04\x02\x00\x01\x00\x00¡ª')
+[19/Jul/2019 03:09:32] "  `    Ä£¯HV¶´Ä£¯HV¶´   ¡ª" 400 -
+[19/Jul/2019 03:09:37] code 400, message Bad request syntax ('\x00|\x03\x06\x00\x82\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x9d/\x1fÉöAÞ½m&\x89ç§\x89lXJ\x08ÿ¸&¾<"½¹L5\x03\xad_gbéÜ\x9d\x01\x8bºùFð-ó\x9ao\x86¬lGT~xÕÐØI\x0bxIü\x1dùÚH}R\x00\x00u0\x00\x00ê`\x00\x00\x02X\x00\x00\x00ú\x00\x00u0\x00\x00\x00\x01S`\tt\x0b\x06Ò¾ÿ¨PCM¦\x9bè')
+[19/Jul/2019 03:09:37] " |           /ÉöAÞ½m&ç§lXJÿ¸&¾<"½¹L5­_gbéÜºùFð-óo¬lGT~xÕÐØIxIüùÚH}R  u0  ê`  X   ú  u0   S`	tÒ¾ÿ¨PCM¦è" 400 -
+[19/Jul/2019 03:09:37] code 400, message Bad request syntax ('\x01I20100')
+[19/Jul/2019 03:09:37] "I20100" 400 -
+[19/Jul/2019 03:09:43] code 400, message Bad request syntax ('{\x01\x00\x1613955555555\x7f\x00\x00U\x13¥{')
+[19/Jul/2019 03:09:43] "{ 13955555555  U¥{" 400 -
+[19/Jul/2019 03:10:13] code 400, message Bad HTTP/0.9 request type ('\x80\x00\x00(\x07?¦\x07\x00\x00\x00\x00\x00\x00\x00\x02\x00\x01\x86')
+[19/Jul/2019 03:10:13] "  (?¦                                " 400 -
+[19/Jul/2019 03:34:04] code 400, message Bad request syntax ('\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[19/Jul/2019 03:34:04] "                        " 400 -
+[19/Jul/2019 03:34:08] code 400, message Bad request syntax ('\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[19/Jul/2019 03:34:08] "                        " 400 -
+[19/Jul/2019 03:37:00] code 400, message Bad request syntax ('\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x04\x00\x05\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
+[19/Jul/2019 03:37:00] "                        " 400 -
+[19/Jul/2019 04:08:21] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+[19/Jul/2019 04:08:21] "  +&à     Cookie: mstshash=hello" 400 -
+[19/Jul/2019 04:45:14] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+[19/Jul/2019 04:45:14] "  +&à     Cookie: mstshash=hello" 400 -
+[19/Jul/2019 05:24:11] code 400, message Bad HTTP/0.9 request type ('\x03\x00\x00+&à\x00\x00\x00\x00\x00Cookie:')
+[19/Jul/2019 05:24:11] "  +&à     Cookie: mstshash=hello" 400 -
