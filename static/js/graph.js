@@ -130,57 +130,76 @@ function create_graph(data){
             .on("end", dragended));
     // 繪製文字
     link.on("click", function(d){
-        // d example
-        // index: 11
-        // source: {name: "吳淑珍", index: 3, x: 815.7180027407591, y: 394.3150093427693, vy: 0.000023567610047150555, …}
-        // target: {name: "黃睿靚", index: 2, x: 703.3032211246168, y: 205.691069188687, vy: -0.000026148494884777663, …}
-        // verdict: ['最高法院 100.03.03.  一百年度臺抗字第128號刑事裁定', '最高法院 101.04.30. 一百零一年度臺抗字第360號刑事裁定']
-        // weight: 2
+        // data example:
+            // index: 11
+            // source: {name: "吳淑珍", index: 3, x: 815.7180027407591, y: 394.3150093427693, vy: 0.000023567610047150555, …}
+            // target: {name: "黃睿靚", index: 2, x: 703.3032211246168, y: 205.691069188687, vy: -0.000026148494884777663, …}
+            // verdict: ['最高法院 100.03.03.  一百年度臺抗字第128號刑事裁定', '最高法院 101.04.30. 一百零一年度臺抗字第360號刑事裁定']
+            // weight: 2
+        // html example:
+            // <th scope="col">#</th>
+            // <th scope="col">裁判字號</th>
+            // <th scope="col">案由</th>
+            // <th scope="col">法院</th>
+            // <th scope="col">判決種類</th>
+        
 
         console.log(d);
         $('#verdict_modal_title').html('<h2 id="verdict_modal_title">' + d['source']['name'] + '與' + d['target']['name'] + '</h2>') 
         $('#verdict_modal').modal('show')
         $("#verdict_modal_table_row").show()
         $('#verdict_modal_title').show()
-        $("#verdict_modal_p").hide()
-        $("#verdict_modal_p_id").hide()
-        $("#verdict_modal_p_title").hide()
-        $("#verdict_modal_p_cat").hide()
-        $("#verdict_modal_p_year").hide()
-        $("#verdict_modal_p_loc").hide()
+        $("#verdict_modal_p_judgement").hide()
+        $("#verdict_modal_p_no").hide()
+        $("#verdict_modal_p_reason").hide()
+        $("#verdict_modal_p_sys").hide()
+        $("#verdict_modal_p_date").hide()
+        $("#verdict_modal_p_court").hide()
         $("#modal_back_btn").hide()
         $('#verdict_modal_tbody').remove();
         $('#verdict_modal_table').append("<tbody id='verdict_modal_tbody'></tbody>")
 
-        for(i = 0; i<d['verdict'].length ; i++){
-            $('#verdict_modal_tbody').append('<tr><th scope="row">' + (i+1) + '</th><td>' + d['verdict'][i] + '</td><td>' + d['title'][i] + '</td><td><button type="button" class="btn btn-dark" onclick="get_verdict(' + '\'' + d['verdict'][i] + '\'' + ')">查看判決書</button></td></tr>');
+        for(i = 0; i<d['v_id'].length ; i++){
+            $('#verdict_modal_tbody').append('<tr><th scope="row">' + (i+1) + '</th><td>' + d['no'][i] + '</td><td>' + d['reason'][i] + '</td><td>' + d['court'][i] + '</td><td>' + d['type'][i] + '</td><td><button type="button" class="btn btn-dark" onclick="get_verdict(' + '\'' + d['v_id'][i] + '\'' + ')">查看判決書</button></td></tr>');
         }
          // here you can access data of node using d.key 
         // alert("You clicked on node " + d.name);
       });
     node.on("dblclick", function(d){
-        // d example
-        // {name: "陳致中", verdict: "['臺灣嘉義地方法院 104.10.30. 一百零四年度嘉交簡字第1400號簡易判決', '最高法院…易判決', '臺灣高雄地方法院刑事 106.07.04. 一百零六年度簡字第1634號簡易判決']", 
-        // title: "['公共危險', '偽證', '貪污等罪聲請酌量扣押財產', '違反貪污治罪條例等罪酌量扣押財產', '違反毒品危害防制條例', '違反毒品危害防制條例', '竊盜', '竊盜']", index: 1, x: 661.5486327616868, …}
-        // weight: 2
+        // data example:
+            // court: (3) ["臺灣臺北地方法院", "臺灣高等法院", "最高法院"]
+            // date: (3) ["2016-03-16T00:00:00+08:00", "2016-06-17T00:00:00+08:00", "2016-08-17T00:00:00+08:00"]
+            // index: 20
+            // name: "黃雅珏"
+            // no: (3) ["105,附民,64", "105,附民上,22", "105,台附,11"]
+            // reason: (3) ["附帶民訴", "刑事附帶民事訴訟", "聲請交付審判附帶民事訴訟"]
+            // sys: (3) ["刑事", "刑事", "刑事"]
+            // type: (3) ["判決", "判決", "判決"]
+            // verdict: (3) ["5d30db9acbd1c48dc979dd80", "5d30e001cbd1c48dc99264fe", "5d30e1f1cbd1c48dc99a3b39"]
+        // html example:
+            // <th scope="col">#</th>
+            // <th scope="col">裁判字號</th>
+            // <th scope="col">案由</th>
+            // <th scope="col">法院</th>
+            // <th scope="col">判決種類</th>
 
         console.log(d);
         $('#verdict_modal_title').html('<h2 id="verdict_modal_title">' + d['name'] + '</h2>') 
         $('#verdict_modal').modal('show')
         $("#verdict_modal_table_row").show()
         $('#verdict_modal_title').show()
-        $("#verdict_modal_p").hide()
-        $("#verdict_modal_p_id").hide()
-        $("#verdict_modal_p_title").hide()
-        $("#verdict_modal_p_cat").hide()
-        $("#verdict_modal_p_year").hide()
-        $("#verdict_modal_p_loc").hide()
+        $("#verdict_modal_p_judgement").hide()
+        $("#verdict_modal_p_no").hide()
+        $("#verdict_modal_p_reason").hide()
+        $("#verdict_modal_p_sys").hide()
+        $("#verdict_modal_p_date").hide()
+        $("#verdict_modal_p_court").hide()
         $("#modal_back_btn").hide()
         $('#verdict_modal_tbody').remove();
         $('#verdict_modal_table').append("<tbody id='verdict_modal_tbody'></tbody>")
 
-        for(i = 0; i<d['verdict'].length ; i++){
-            $('#verdict_modal_tbody').append('<tr><th scope="row">' + (i+1) + '</th><td>' + d['verdict'][i] + '</td><td>' + d['title'][i] + '</td><td><button type="button" class="btn btn-dark" onclick="get_verdict(' + '\'' + d['verdict'][i] + '\'' + ')">查看判決書</button></td></tr>');
+        for(i = 0; i<d['v_id'].length ; i++){
+            $('#verdict_modal_tbody').append('<tr><th scope="row">' + (i+1) + '</th><td>' + d['no'][i] + '</td><td>' + d['reason'][i] + '</td><td>' + d['court'][i] + '</td><td>' + d['type'][i] + '</td><td><button type="button" class="btn btn-dark" onclick="get_verdict(' + '\'' + d['v_id'][i] + '\'' + ')">查看判決書</button></td></tr>');
         }
          // here you can access data of node using d.key 
         // alert("You clicked on node " + d.name);
@@ -277,6 +296,13 @@ function find_path(){
 function get_verdict(verdict){
     console.log(verdict)
 
+    // <h2 id="verdict_modal_p_no"></h2>
+    // <h3 id="verdict_modal_p_reason"></h3>
+    // <h3 id="verdict_modal_p_sys"></h3>
+    // <h3 id="verdict_modal_p_date"></h3>
+    // <h3 id="verdict_modal_p_court"></h3>
+    // <p id='verdict_modal_p_judgement'></p>
+
     $.ajax({
         url: "/get_verdict/",        
         dataType: "json",
@@ -291,19 +317,19 @@ function get_verdict(verdict){
             // $('#verdict_modal').modal('hide')
             $("#verdict_modal_table_row").hide()
             $('#verdict_modal_title').hide()
-            $("#verdict_modal_p").show()
-            $("#verdict_modal_p_id").show()
-            $("#verdict_modal_p_title").show()
-            $("#verdict_modal_p_cat").show()
-            $("#verdict_modal_p_year").show()
-            $("#verdict_modal_p_loc").show()
+            $("#verdict_modal_p_judgement").show()
+            $("#verdict_modal_p_no").show()
+            $("#verdict_modal_p_reason").show()
+            $("#verdict_modal_p_sys").show()
+            $("#verdict_modal_p_date").show()
+            $("#verdict_modal_p_court").show()
             $("#modal_back_btn").show()
-            $("#verdict_modal_p").html(data['JFULL'])
-            $("#verdict_modal_p_id").html(data['JID'])
-            $("#verdict_modal_p_title").html("被告事項: " + data['JTITLE'])
-            $("#verdict_modal_p_cat").html("種類: " + data['JCAT'])
-            $("#verdict_modal_p_year").html("年份: " + data['JYEAR'])
-            $("#verdict_modal_p_loc").html("地方: " + data['JLOC'])
+            $("#verdict_modal_p_judgement").html(data['judgement'])
+            $("#verdict_modal_p_no").html("裁判字號: " + data['no'])
+            $("#verdict_modal_p_reason").html("案由: " + data['reason'])
+            $("#verdict_modal_p_sys").html("判決種類: " + data['sys'])
+            $("#verdict_modal_p_date").html("日期: " + data['date'])
+            $("#verdict_modal_p_court").html("法院: " + data['court'])
         },
         
         error:function() {
@@ -314,24 +340,24 @@ function get_verdict(verdict){
 function modal_back(){
     $("#verdict_modal_table_row").show()
     $('#verdict_modal_title').show()
-    $("#verdict_modal_p").hide()
-    $("#verdict_modal_p_id").hide()
-    $("#verdict_modal_p_title").hide()
-    $("#verdict_modal_p_cat").hide()
-    $("#verdict_modal_p_year").hide()
-    $("#verdict_modal_p_loc").hide()
+    $("#verdict_modal_p_judgement").hide()
+    $("#verdict_modal_p_no").hide()
+    $("#verdict_modal_p_reason").hide()
+    $("#verdict_modal_p_sys").hide()
+    $("#verdict_modal_p_date").hide()
+    $("#verdict_modal_p_court").hide()
     $("#modal_back_btn").hide()
 }
 
 // $('#verdict_modal').on('hide.bs.modal', function (e) {
 //     $("#verdict_modal_table_row").show()
 //     $('#verdict_modal_title').show()
-//     $("#verdict_modal_p").hide()
-//     $("#verdict_modal_p_id").hide()
-//     $("#verdict_modal_p_title").hide()
-//     $("#verdict_modal_p_cat").hide()
-//     $("#verdict_modal_p_year").hide()
-//     $("#verdict_modal_p_loc").hide()
+//     $("#verdict_modal_p_judgement").hide()
+//     $("#verdict_modal_p_no").hide()
+//     $("#verdict_modal_p_reason").hide()
+//     $("#verdict_modal_p_sys").hide()
+//     $("#verdict_modal_p_date").hide()
+//     $("#verdict_modal_p_court").hide()
 //     $("#modal_back_btn").hide()
 //     // do something...
 //   })

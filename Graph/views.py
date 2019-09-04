@@ -3,8 +3,11 @@ from django.template.loader import get_template
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from pymongo import MongoClient
+from bson.objectid import ObjectId
 import networkx as nx
 import ast
+import datetime
+import multiprocessing as mp
 
 def homepage(request):
 	template = get_template('index.html')
@@ -23,12 +26,13 @@ def search_prisoner(request):
     prisoner = request.POST['prisoner']
 
     client = MongoClient('140.120.13.244', 27018)
-    Node = list(client.Law.Node.find({}))
+    # Node = list(client.Law.Node_2019.find({}, no_cursor_timeout=True))
     result = []
 
-    for n in Node:
-        if(prisoner in n['Name']):
-            result.append(n['Name'])
+    for index, n in enumerate(client.Law.Node_2019.find({ '$text': { '$search': prisoner } }, no_cursor_timeout=True)):
+        # print(index)
+        if(prisoner in n['name']):
+            result.append(n['name'])
 
     result = {'prisoner': result}
     return JsonResponse(result)
@@ -45,6 +49,7 @@ def get_graph_data(request):
     Target = [prisoner] # 現在level要找的node
     haveFindNode = [] # 曾經找過的node
     Edge = {} # 所有node的edge
+    Map = []
 
     for l in range(int(level)): 
         for t in Target:
@@ -57,12 +62,11 @@ def get_graph_data(request):
 
     get_Edge(Node, Edge, Link)
 
-    Map = []
 
     client = MongoClient('140.120.13.244', 27018)
     for n in Node:
-        this_Node = client.Law.Node.find({'Name': n})[0]
-        this_Node = {'name': n, 'verdict': ast.literal_eval(this_Node['Verdict']), 'title': ast.literal_eval(this_Node['Title'])}
+        this_Node = client.Law.Node_2019.find({'name': n})[0]
+        this_Node = {'name': n, 'v_id': this_Node['v_id'], 'reason': this_Node['reason'], 'sys': this_Node['sys'], 'court': this_Node['court'], 'type': this_Node['type'], 'no': this_Node['no'], 'date': this_Node['date']}
         Map.append(this_Node)
 
     result = {'Map': Map, 'Link': Link}
@@ -75,27 +79,75 @@ def get_node(prisoner, Node, Edge): # 取得所有鄰居node
     if(prisoner not in Node):
         Node.append(prisoner)
     if(prisoner not in Edge):
-        this_Edge = list( client.Law.Edge.find({'From Name': prisoner}))
+        this_Edge = list( client.Law.Edge_2019.find({'from_Name': prisoner}))
         Edge[prisoner] = this_Edge
     else:
         this_Edge = Edge[prisoner]
 
     for e in this_Edge:
-        if(e['To Name'] not in Node):
-            Node.append(e['To Name'])
+        if(e['to_Name'] not in Node):
+            Node.append(e['to_Name'])
 
+def edge_process(q, ni, Node, Edge):
+    client = MongoClient('140.120.13.244', 27018)
+    Link = []
+    if(ni not in Edge):
+        this_Edge = list( client.Law.Edge_2019.find({'from_Name': ni}))
+        Edge[ni] = this_Edge
+    else:
+        this_Edge = Edge[ni]
+    for e in this_Edge:
+        for nj_index, nj in enumerate(Node):
+            print('nj_index:', nj_index, 'ni', ni)
+            if(e['to_Name'] == nj):
+                Link.append({'source': Node.index(e['from_Name']), 'target': Node.index(e['to_Name']), 'weight': e['weight'], 'v_id': e['v_id'], 'reason': e['reason'], 'sys': e['sys'], 'court': e['court'], 'type': e['type'], 'no': e['no'], 'date': e['date']})
+    q.put(Link)
+    
 def get_Edge(Node, Edge, Link): # 取得所有node的edge
     client = MongoClient('140.120.13.244', 27018)
-    for ni in Node:
+    start = datetime.datetime.now()
+    # for ni_index, ni in enumerate(Node):
+    #     for e in client.Law.Edge_2019.find({'from_Name': ni}):
+    #         for nj_index, nj in enumerate(Node):
+    #             print('ni_index:', ni_index, 'nj_index:', nj_index)
+    #             if(e['to_Name'] == nj):
+    #                 Link.append({'source': Node.index(e['from_Name']), 'target': Node.index(e['to_Name']), 'weight': e['weight'], 'verdict': e['v_id'], 'title': e['reason']})
+
+    # for ni_index, ni in enumerate(Node):
+    #     for nj_index, nj in enumerate(Node):
+    #         this_Edge = list(client.Law.Edge_2019.find({'from_Name': ni, 'to_Name': nj}))
+    #         print('ni_index:', ni_index, 'nj_index:', nj_index)
+    #         if(len(this_Edge) != 0):
+    #             this_Edge = this_Edge[0]
+    #             Link.append({'source': ni_index, 'target': nj_index, 'weight': this_Edge['weight'], 'verdict': this_Edge['v_id'], 'title': this_Edge['reason']})
+
+    # print('Node', Node)
+    
+    for ni_index, ni in enumerate(Node):
         if(ni not in Edge):
-            this_Edge = list( client.Law.Edge.find({'From Name': ni}))
+            this_Edge = list( client.Law.Edge_2019.find({'from_Name': ni}))
             Edge[ni] = this_Edge
         else:
             this_Edge = Edge[ni]
         for e in this_Edge:
-            for nj in Node:
-                if(e['To Name'] == nj):
-                    Link.append({'source': Node.index(e['From Name']), 'target': Node.index(e['To Name']), 'weight': e['Weight'], 'verdict': ast.literal_eval(e['Verdict']), 'title': ast.literal_eval(e['Title'])})
+            for nj_index, nj in enumerate(Node):
+                print('ni_index:', ni_index, 'nj_index:', nj_index, 'ni', ni)
+                if(e['to_Name'] == nj):
+                    Link.append({'source': Node.index(e['from_Name']), 'target': Node.index(e['to_Name']), 'weight': e['weight'], 'v_id': e['v_id'], 'reason': e['reason'], 'sys': e['sys'], 'court': e['court'], 'type': e['type'], 'no': e['no'], 'date': e['date']})
+    
+    # if __name__=='__main__':
+    # q = mp.Queue()
+    # for ni_index, ni in enumerate(Node):
+    #     print('ni_index', ni_index)
+    #     p = mp.Process(target=edge_process, args=(q, ni, Node, Edge))  
+    #     p.start()
+    #     p.join()
+    #     Link += q.get()
+
+    time = datetime.datetime.now() - start
+    print('Time:', time)
+
+    
 
 @csrf_exempt
 def get_shortest_path(request):
@@ -142,12 +194,11 @@ def get_verdict(request):
     print(verdict_id)
 
     client = MongoClient('140.120.13.244', 27018)
-    Verdict = list(client.Law.Verdict.find({'JID': verdict_id}))[0]
+    Verdict = list(client.Law.Verdict_2019.find({'_id': ObjectId(verdict_id)}))[0]
 
-    result = {'JFULL': Verdict['JFULL'], 'JTITLE': Verdict['JTITLE'], 'JLOC': Verdict['JLOC'], 'JCAT': Verdict['JCAT'], 'JDATE': Verdict['JDATE'], 'JYEAR': Verdict['JYEAR'], 'JID': Verdict['JID']}
+    result = {'mainText': Verdict['mainText'], 'court': Verdict['court'], 'judgement': Verdict['judgement'], 'no': Verdict['no'], 'type': Verdict['type'], 'sys': Verdict['sys'], 'opinion': Verdict['opinion'], 'reason': Verdict['reason'], 'date': Verdict['date']}
     return JsonResponse(result)
         
-
 
 # Test mongodb
 # client = MongoClient('140.120.13.244', 27018)
