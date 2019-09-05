@@ -129,11 +129,14 @@ def get_Edge(Node, Edge, Link): # 取得所有node的edge
             Edge[ni] = this_Edge
         else:
             this_Edge = Edge[ni]
+        the_edge_to_name = []
         for e in this_Edge:
-            for nj_index, nj in enumerate(Node):
-                print('ni_index:', ni_index, 'nj_index:', nj_index, 'ni', ni)
-                if(e['to_Name'] == nj):
-                    Link.append({'source': Node.index(e['from_Name']), 'target': Node.index(e['to_Name']), 'weight': e['weight'], 'v_id': e['v_id'], 'reason': e['reason'], 'sys': e['sys'], 'court': e['court'], 'type': e['type'], 'no': e['no'], 'date': e['date']})
+            the_edge_to_name.append(e['to_Name'])
+        for nj_index, nj in enumerate(Node):
+            print('ni_index:', ni_index, 'nj_index:', nj_index, 'ni', ni)
+            if(nj in the_edge_to_name):
+                e = this_Edge[the_edge_to_name.index(nj)]
+                Link.append({'source': Node.index(e['from_Name']), 'target': Node.index(e['to_Name']), 'weight': e['weight'], 'v_id': e['v_id'], 'reason': e['reason'], 'sys': e['sys'], 'court': e['court'], 'type': e['type'], 'no': e['no'], 'date': e['date']})
     
     # if __name__=='__main__':
     # q = mp.Queue()
@@ -148,18 +151,20 @@ def get_Edge(Node, Edge, Link): # 取得所有node的edge
     print('Time:', time)
 
     
+import os
 
 @csrf_exempt
 def get_shortest_path(request):
     source = request.POST['source']
     target = request.POST['target']
-
+    print(os.getcwd())
     print(source, target)
     G = nx.Graph()
     client = MongoClient('140.120.13.244', 27018)
-    Edge = list(client.Law.Edge.find({}))
+    Edge = list(client.Law.Edge_2019.find({}))
+
     for i, e in enumerate(Edge):
-        G.add_edge(e['From Name'], e['To Name'])
+        G.add_edge(e['from_Name'], e['to_Name'])
         # print(i, " ", e['From Name'], " ", e['To Name'])
 
     Node = []
@@ -170,16 +175,17 @@ def get_shortest_path(request):
         for ni, n in enumerate(path):
             Node.append(n)
             if(ni!=len(path)-1):
-                this_Edge = list(client.Law.Edge.find({'From Name': n, 'To Name': path[ni+1]}))[0]
-                Link.append({'source': ni, 'target': ni+1, 'weight': this_Edge['Weight'], 'verdict': ast.literal_eval(this_Edge['Verdict']), 'title': ast.literal_eval(this_Edge['Title'])})
+                this_Edge = list(client.Law.Edge_2019.find({'from_Name': n, 'to_Name': path[ni+1]}))[0]
+                Link.append({'source': ni, 'target': ni+1, 'weight': this_Edge['weight'], 'v_id': this_Edge['v_id'], 'reason': this_Edge['reason'], 'sys': this_Edge['sys'], 'court': this_Edge['court'], 'type': this_Edge['type'], 'no': this_Edge['no'], 'date': this_Edge['date']})
     except:
         path = []
         Node = [source, target]
     
+    print(Map)
     for n in Node: 
         try:
-            this_Node = client.Law.Node.find({'Name': n})[0]
-            this_Node = {'name': n, 'verdict': ast.literal_eval(this_Node['Verdict']), 'title': ast.literal_eval(this_Node['Title'])}
+            this_Node = client.Law.Node_2019.find({'Name': n})[0]
+            this_Node = {'name': n, 'v_id': this_Node['v_id'], 'reason': this_Node['reason'], 'sys': this_Node['sys'], 'court': this_Node['court'], 'type': this_Node['type'], 'no': this_Node['no'], 'date': this_Node['date']}
         except:
             this_Node = {'name': n}
         Map.append(this_Node)
