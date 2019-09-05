@@ -4,6 +4,8 @@ from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from pymongo import MongoClient
 from bson.objectid import ObjectId
+from networkx.readwrite.json_graph import node_link_data, node_link_graph
+import json
 import networkx as nx
 import ast
 import datetime
@@ -159,37 +161,40 @@ def get_shortest_path(request):
     target = request.POST['target']
     print(os.getcwd())
     print(source, target)
-    G = nx.Graph()
+    # G = nx.Graph()
     client = MongoClient('140.120.13.244', 27018)
-    Edge = list(client.Law.Edge_2019.find({}))
+    # Edge = list(client.Law.Edge_2019.find({}, no_cursor_timeout=True).batch_size(5))
 
-    for i, e in enumerate(Edge):
-        G.add_edge(e['from_Name'], e['to_Name'])
-        # print(i, " ", e['From Name'], " ", e['To Name'])
+    # for i, e in enumerate(Edge):
+    #     G.add_edge(e['from_Name'], e['to_Name'])
+    #     # print(i, " ", e['From Name'], " ", e['To Name'])
+    with open ('static/graph/Law_edge_gragh.json', 'r', encoding='UTF-8') as F:
+        G = node_link_graph(json.load(F))
 
     Node = []
     Link = []
     Map = []
     try:
         path = nx.shortest_path(G, source = source, target = target)
+        print('path:', path)
         for ni, n in enumerate(path):
             Node.append(n)
             if(ni!=len(path)-1):
                 this_Edge = list(client.Law.Edge_2019.find({'from_Name': n, 'to_Name': path[ni+1]}))[0]
                 Link.append({'source': ni, 'target': ni+1, 'weight': this_Edge['weight'], 'v_id': this_Edge['v_id'], 'reason': this_Edge['reason'], 'sys': this_Edge['sys'], 'court': this_Edge['court'], 'type': this_Edge['type'], 'no': this_Edge['no'], 'date': this_Edge['date']})
     except:
-        path = []
-        Node = [source, target]
+            path = []
+            Node = [source, target]
     
-    print(Map)
     for n in Node: 
         try:
-            this_Node = client.Law.Node_2019.find({'Name': n})[0]
+            this_Node = client.Law.Node_2019.find({'name': n})[0]
             this_Node = {'name': n, 'v_id': this_Node['v_id'], 'reason': this_Node['reason'], 'sys': this_Node['sys'], 'court': this_Node['court'], 'type': this_Node['type'], 'no': this_Node['no'], 'date': this_Node['date']}
         except:
-            this_Node = {'name': n}
+                this_Node = {'name': n}
         Map.append(this_Node)
 
+    # print(Map)
     result = {'Map': Map, 'Link': Link}
     return JsonResponse(result)
 
