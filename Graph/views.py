@@ -39,6 +39,29 @@ def search_prisoner(request):
     result = {'prisoner': result}
     return JsonResponse(result)
 
+def demo_page(request):
+    template = get_template('graph_demo.html')
+    level = ['第1層', '第2層']
+    html = template.render(locals())
+    return HttpResponse(html)
+
+@csrf_exempt
+def get_graph_data_for_demo(request):
+    print(request.POST)
+
+    with open('Wei_data.json', 'r', encoding='UTF-8') as F:
+        result = json.load(F)
+
+
+    # result = {'Map': Map, 'Link': Link}
+    
+    # with open('Wei_data.json', 'w', encoding='UTF-8') as F:
+    #     json.dump(result, F, ensure_ascii=False)
+
+    # print(result)
+
+    return JsonResponse(result)
+
 @csrf_exempt
 def get_graph_data(request):
     print(request.POST)
@@ -72,6 +95,7 @@ def get_graph_data(request):
         Map.append(this_Node)
 
     result = {'Map': Map, 'Link': Link}
+    
     # print(result)
 
     return JsonResponse(result)

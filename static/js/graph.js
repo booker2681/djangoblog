@@ -32,6 +32,37 @@ function search_prisoner(){
     });
 }  
 
+function send_graph_data_for_demo(){
+    // var level = $('#level').val();
+    // $('#level_send_graph_data').attr('onclick', 'send_graph_data(' + '\'' + prisoner + '\'' + ')')
+    // $("button").attr("disabled", true);
+
+    console.log(level)
+
+    $.ajax({
+        url: "/get_graph_data_for_demo/",        
+        dataType: "json",
+        traditional: true, 
+        data: {
+            prisoner: '123',
+        },
+        type:"POST",
+
+        success: function(data) {
+            console.log(data)
+            create_graph(data)
+            $("#graph_card_div").show();
+            $("#option_card_div").show();
+
+            $("button").attr("disabled", false);
+        },
+        
+        error:function() {
+            $("button").attr("disabled", false);
+        }
+    });
+}
+
 function send_graph_data(prisoner){
     var level = $('#level').val();
     $('#level_send_graph_data').attr('onclick', 'send_graph_data(' + '\'' + prisoner + '\'' + ')')
