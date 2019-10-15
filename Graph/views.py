@@ -62,8 +62,15 @@ def get_graph_data_for_demo(request):
 
     return JsonResponse(result)
 
+def node_process(name):
+    client = MongoClient('140.120.13.244', 27018)
+    this_Node = client.Law.Node_2019.find({'name': name})[0]
+    this_Node = {'name': name, 'v_id': this_Node['v_id'], 'reason': this_Node['reason'], 'sys': this_Node['sys'], 'court': this_Node['court'], 'type': this_Node['type'], 'no': this_Node['no'], 'date': this_Node['date']}
+    return this_Node
+
 @csrf_exempt
 def get_graph_data(request):
+    start = datetime.datetime.now()
     print(request.POST)
     prisoner = request.POST['prisoner']
     level = request.POST['level']
@@ -84,17 +91,27 @@ def get_graph_data(request):
         for n in Node: # target為新增的node中 不曾找過的node
             if(n not in haveFindNode): # 曾經找過node 不再是下次target
                 Target.append(n)
+        
 
+    # Get all edge
     get_Edge(Node, Edge, Link)
 
-
-    client = MongoClient('140.120.13.244', 27018)
+    # Get node information
+    pool = mp.Pool() 
+    Node_result = []
     for n in Node:
-        this_Node = client.Law.Node_2019.find({'name': n})[0]
-        this_Node = {'name': n, 'v_id': this_Node['v_id'], 'reason': this_Node['reason'], 'sys': this_Node['sys'], 'court': this_Node['court'], 'type': this_Node['type'], 'no': this_Node['no'], 'date': this_Node['date']}
-        Map.append(this_Node)
+        print(n)
+        p = pool.apply_async(node_process, args=(n,)) 
+        Node_result.append(p)
+    for r in Node_result:
+        Map.append(r.get())
+    pool.close()
+    pool.join()
 
     result = {'Map': Map, 'Link': Link}
+
+    time = datetime.datetime.now() - start
+    print('Time:', time)
     
     # print(result)
 
@@ -114,7 +131,7 @@ def get_node(prisoner, Node, Edge): # 取得所有鄰居node
         if(e['to_Name'] not in Node):
             Node.append(e['to_Name'])
 
-def edge_process(q, ni, Node, Edge):
+def edge_process(ni, Node, Edge):
     client = MongoClient('140.120.13.244', 27018)
     Link = []
     if(ni not in Edge):
@@ -127,44 +144,39 @@ def edge_process(q, ni, Node, Edge):
             print('nj_index:', nj_index, 'ni', ni)
             if(e['to_Name'] == nj):
                 Link.append({'source': Node.index(e['from_Name']), 'target': Node.index(e['to_Name']), 'weight': e['weight'], 'v_id': e['v_id'], 'reason': e['reason'], 'sys': e['sys'], 'court': e['court'], 'type': e['type'], 'no': e['no'], 'date': e['date']})
-    q.put(Link)
+    # q.put(Link)
+
+    return Link
     
 def get_Edge(Node, Edge, Link): # 取得所有node的edge
-    client = MongoClient('140.120.13.244', 27018)
-    start = datetime.datetime.now()
-    # for ni_index, ni in enumerate(Node):
-    #     for e in client.Law.Edge_2019.find({'from_Name': ni}):
-    #         for nj_index, nj in enumerate(Node):
-    #             print('ni_index:', ni_index, 'nj_index:', nj_index)
-    #             if(e['to_Name'] == nj):
-    #                 Link.append({'source': Node.index(e['from_Name']), 'target': Node.index(e['to_Name']), 'weight': e['weight'], 'verdict': e['v_id'], 'title': e['reason']})
-
+    
+    # get one edge between two node
     # for ni_index, ni in enumerate(Node):
     #     for nj_index, nj in enumerate(Node):
-    #         this_Edge = list(client.Law.Edge_2019.find({'from_Name': ni, 'to_Name': nj}))
+    #         this_Edge = client.Law.Edge_2019.find_one({'from_Name': ni, 'to_Name': nj})
     #         print('ni_index:', ni_index, 'nj_index:', nj_index)
-    #         if(len(this_Edge) != 0):
-    #             this_Edge = this_Edge[0]
+    #         if(this_Edge != None):
     #             Link.append({'source': ni_index, 'target': nj_index, 'weight': this_Edge['weight'], 'verdict': this_Edge['v_id'], 'title': this_Edge['reason']})
 
     # print('Node', Node)
     
-    for ni_index, ni in enumerate(Node):
-        if(ni not in Edge):
-            this_Edge = list( client.Law.Edge_2019.find({'from_Name': ni}))
-            Edge[ni] = this_Edge
-        else:
-            this_Edge = Edge[ni]
-        the_edge_to_name = []
-        for e in this_Edge:
-            the_edge_to_name.append(e['to_Name'])
-        for nj_index, nj in enumerate(Node):
-            print('ni_index:', ni_index, 'nj_index:', nj_index, 'ni', ni)
-            if(nj in the_edge_to_name):
-                e = this_Edge[the_edge_to_name.index(nj)]
-                Link.append({'source': Node.index(e['from_Name']), 'target': Node.index(e['to_Name']), 'weight': e['weight'], 'v_id': e['v_id'], 'reason': e['reason'], 'sys': e['sys'], 'court': e['court'], 'type': e['type'], 'no': e['no'], 'date': e['date']})
+    # get all edge in one node
+    # for ni_index, ni in enumerate(Node):
+    #     if(ni not in Edge):
+    #         this_Edge = list( client.Law.Edge_2019.find({'from_Name': ni}))
+    #         Edge[ni] = this_Edge
+    #     else:
+    #         this_Edge = Edge[ni]
+    #     the_edge_to_name = []
+    #     for e in this_Edge:
+    #         the_edge_to_name.append(e['to_Name'])
+    #     for nj_index, nj in enumerate(Node):
+    #         print('ni_index:', ni_index, 'nj_index:', nj_index, 'ni', ni)
+    #         if(nj in the_edge_to_name):
+    #             e = this_Edge[the_edge_to_name.index(nj)]
+    #             Link.append({'source': Node.index(e['from_Name']), 'target': Node.index(e['to_Name']), 'weight': e['weight'], 'v_id': e['v_id'], 'reason': e['reason'], 'sys': e['sys'], 'court': e['court'], 'type': e['type'], 'no': e['no'], 'date': e['date']})
     
-    # if __name__=='__main__':
+    # muti-process
     # q = mp.Queue()
     # for ni_index, ni in enumerate(Node):
     #     print('ni_index', ni_index)
@@ -173,8 +185,18 @@ def get_Edge(Node, Edge, Link): # 取得所有node的edge
     #     p.join()
     #     Link += q.get()
 
-    time = datetime.datetime.now() - start
-    print('Time:', time)
+    print('cpus: ', mp.cpu_count())
+    pool = mp.Pool() 
+    result = []
+    for ni_index, ni in enumerate(Node):
+        print('ni_index', ni_index)
+        p = pool.apply_async(edge_process, args=(ni, Node, Edge))  
+        result.append(p)
+    for r in result:
+        Link += r.get()
+    pool.close()
+    pool.join()
+
 
     
 import os
