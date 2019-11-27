@@ -262,20 +262,11 @@ function create_graph(data){
       });
     
 
-    var palette = {
-        "lightgray": "#D9DEDE",
-        "gray": "#C3C8C8",
-        "mediumgray": "#536870",
-        "orange": "#BD3613",
-        "purple": "#595AB7",
-        "yellowgreen": "#738A05"
-    }
-
     node.on('mouseover', function(d) {
         //顏清標
         // When mousing over a node, make the label bigger and bold
         // and revert any previously enlarged text to normal
-        console.log(d)
+        // console.log(d)
 
         // d3.selectAll('.nodes').selectAll('text')
         //   .attr('font-size', '15')
@@ -357,9 +348,32 @@ function create_graph(data){
         //     return charge * 10;
         //   }
         // });
-        // simulation.start();
       })
-    //   .call(simulation.drag)
+
+    link.on('mouseover', function(d) {
+    
+        // Reset and fade-out the unrelated links
+        d3.selectAll('.line')
+            .attr("stroke","rgb(221, 221, 221)")
+        d3.selectAll('.nodes')
+            .attr("stroke","rgb(221, 221, 221)")
+            .attr('stroke-width', 1)
+
+    
+        d3.select('.line_' + d.source.index + '.to_' + d.target.index)
+            .attr('stroke', 'rgb(204, 0, 0)')
+        d3.select('.line_' + d.target.index + '.to_' + d.source.index)
+            .attr('stroke', 'rgb(204, 0, 0)')
+        // Highlight the nodes connected to this one
+        d3.select('#node_' + d.target.index)
+            .attr("stroke","rgb(204, 0, 0)")
+            .attr('stroke-width', 4)
+        d3.select('#node_' + d.source.index)
+            .attr("stroke","rgb(204, 0, 0)")
+            .attr('stroke-width', 4)            
+    
+    })
+    
 
     var text = svg.selectAll("text")
         // 讀取資料
