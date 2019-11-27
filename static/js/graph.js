@@ -102,7 +102,15 @@ function create_graph(data){
     var map = data['Map']
     var links = data['Link']
 
-    console.log(data)
+    // map append target
+    for(i = 0; i<map.length ; i++){
+        map[i]['target'] = []
+    }
+    for(i = 0; i<links.length ; i++){
+        map[links[i]['source']]['target'].push(links[i]['target'])
+    }
+    console.log(map)
+    console.log(links)
 
     // var map=[
     //     {name:"小美"},
@@ -119,7 +127,7 @@ function create_graph(data){
     var height = 600;
     // 設定顏色 使用d3內建的顏色 Category20有20種顏色 使用RGB十六進位表示
     var color = d3.scaleOrdinal()
-        .range(d3.schemeCategory20);
+        .range(d3.schemeSet3);
     // 設定畫布(SVG)
     var svg = d3.select("div#graph").append("svg")
         .attr("width", width)
@@ -131,30 +139,39 @@ function create_graph(data){
         .force("center", d3.forceCenter(width / 2, height / 2));
     // 繪製線 
     var link = svg.append("g")
-        // 繪製類別 - 線
-        .attr("class", "links")
         // 線 用line元素來繪製
         .selectAll("line")
         // 讀取資料
         .data(links)
         .enter().append("line")
         // 線的寬度跟樣式
-        .attr("stroke-width", 3.8)
-        .attr("stroke","rgb(221, 221, 221)");
+        .attr("stroke-width", function(d) { return d.weight * 0.5 + 3.8})
+        .attr("stroke","rgb(221, 221, 221)")
+        // 繪製類別 - 線
+        // .attr("class", "links")
+        .attr('class', function(d) {
+            // Add classes to lines to identify their from's and to's
+          var theClass ='line_' + d.source + ' line';
+            if(d.target !== undefined) {
+                theClass += ' to_' + d.target
+            }
+          return  theClass
+        });
     // 繪製點
     var node = svg.append("g")
-        // 繪製類別 - 點
-        .attr("class", "nodes")
         // 繪成圓形
         .selectAll("circle")
         // 讀取資料
         .data(map)
         .enter().append("circle")
         // 圓的寬度與樣式
-        .attr("r", 17) // 圓大小　
-        .attr("fill", function(d,i) { return color(i); })
-        .attr('stroke','white')
-        .attr('stroke-width',4) // 外圓寬度
+        .attr("r", function(d) { return d.target.length * 0.5 + 17 }) // 圓大小　
+        .attr("fill", function(d) { return color(d.target.length  ); })
+        .attr('stroke','rgb(221, 221, 221)')
+        // .attr('stroke-width', 4) // 外圓寬度
+        .attr('id', function(d, i) { return 'node_' + i}) // node id
+        // 繪製類別 - 點
+        .attr("class", "nodes")
         .call(d3.drag()
             .on("start", dragstarted)
             .on("drag", dragged)
@@ -173,7 +190,15 @@ function create_graph(data){
             // <th scope="col">案由</th>
             // <th scope="col">法院</th>
             // <th scope="col">判決種類</th>
-        
+        // var map=[
+        //     {name:"小美"},
+        //     {name:"小名"},
+        // ];
+        // // 宣告link
+        // var links=[
+        //     {source:0,
+        //      target:1},
+        // ];
 
         console.log(d);
         $('#verdict_modal_title').html('<h2 id="verdict_modal_title">' + d['source']['name'] + '與' + d['target']['name'] + '</h2>') 
@@ -235,6 +260,107 @@ function create_graph(data){
          // here you can access data of node using d.key 
         // alert("You clicked on node " + d.name);
       });
+    
+
+    var palette = {
+        "lightgray": "#D9DEDE",
+        "gray": "#C3C8C8",
+        "mediumgray": "#536870",
+        "orange": "#BD3613",
+        "purple": "#595AB7",
+        "yellowgreen": "#738A05"
+    }
+
+    node.on('mouseover', function(d) {
+        //顏清標
+        // When mousing over a node, make the label bigger and bold
+        // and revert any previously enlarged text to normal
+        console.log(d)
+
+        // d3.selectAll('.nodes').selectAll('text')
+        //   .attr('font-size', '15')
+        //   .attr('font-weight', 'normal')
+  
+        // // Highlight the current node
+        // d3.select(this).select('text')
+        //   .attr('font-size', '16')
+        //   .attr('font-weight', 'bold')
+        
+        // // Hightlight the nodes that the current node connects to
+        // for(var i = 0; i < d.target.length; i++) {
+        //     d3.select('#node_' + d.target[i]).select('text')
+        //   .attr('font-size', '14')
+        //   .attr('font-weight', 'bold')        
+        // }
+        
+        // Reset and fade-out the unrelated links
+        d3.selectAll('.line')
+            .attr("stroke","rgb(221, 221, 221)")
+        d3.selectAll('.nodes')
+            .attr("stroke","rgb(221, 221, 221)")
+            .attr('stroke-width', 1)
+
+        for(var x = 0; x < links.length; x++) {
+            // console.log(links[x].target.index);
+            if(links[x].target !== undefined) {
+                if(links[x].target.index === d.index) {
+                // Highlight the connections to this node
+                // console.log(links[x].target.index);
+                d3.selectAll('.to_' + links[x].target.index)
+                    .attr('stroke', '#595AB7')
+                d3.selectAll('.line_' + links[x].target.index)
+                    .attr('stroke', '#595AB7')
+                // Highlight the nodes connected to this one
+                d3.select('#node_' + links[x].target.index)
+                    .attr("stroke","#595AB7")
+                    .attr('stroke-width', 4)
+                d3.select('#node_' + links[x].source.index)
+                    .attr("stroke","#595AB7")
+                    .attr('stroke-width', 4)            
+                }
+            }
+        }
+        
+        // Highlight the connections from this node
+        // d3.selectAll('.line_' + d.id)
+        //       .attr('stroke', palette.purple)
+        //     .attr('stroke-width', 3)
+  
+        // When mousing over a node, 
+        // make it more repulsive so it stands out
+        // simulation.charge(function(d2, i) {
+        //   if (d2 != d) {
+            
+        //     // Make the nodes connected to more repulsive
+        //     for(var i = 0; i < d.target.length; i++) {
+        //       if(d2.id == d.target[i]) {
+        //         return charge * 8
+        //       }
+        //     }
+            
+        //     // Make the nodes connected from more repulsive
+        //     for(var x = 0; x < links.length; x++) {
+        //       if(links[x].source.id === d2.id) {
+        //         if(links[x].target !== undefined) {
+        //           if(links[x].target.id === d.id) {
+        //             return charge * 8
+        //           }
+        //         }
+        //       }
+        //     }
+            
+        //     // Reset unrelated nodes
+        //     return charge;
+            
+        //   } else {
+        //     // Make the selected node more repulsive
+        //     return charge * 10;
+        //   }
+        // });
+        // simulation.start();
+      })
+    //   .call(simulation.drag)
+
     var text = svg.selectAll("text")
         // 讀取資料
          .data(map)
@@ -244,9 +370,11 @@ function create_graph(data){
          .style("fill", "black")
          .attr("dx", 12)
          .attr("dy", 5)
+         .attr('font-size', '18')
          .text(function(d){
             return d.name;
          });
+
     // 將模擬器綁定節點、線、文字
     simulation
         .nodes(map) //產生index,vx,xy,x,y數值來做視覺化
@@ -254,25 +382,25 @@ function create_graph(data){
 
     simulation.force("link")
         .links(links)
-        .distance(180);
+        .distance(250);
 
     simulation.force("charge")
         .strength(-60)
     // 定義ticked()，用來當tick發現數據改變時，要做的動作
     function ticked() {
-    link
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
+        link
+            .attr("x1", function(d) { return d.source.x; })
+            .attr("y1", function(d) { return d.source.y; })
+            .attr("x2", function(d) { return d.target.x; })
+            .attr("y2", function(d) { return d.target.y; });
 
-    node
-        .attr("cx", function(d) { return d.x; })
-        .attr("cy", function(d) { return d.y; });
+        node
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; });
 
-    text
-        .attr("x", function(d) { return d.x;})
-        .attr("y", function(d) { return d.y;});
+        text
+            .attr("x", function(d) { return d.x;})
+            .attr("y", function(d) { return d.y;});
     };
     // 定義拖拉的動作，因為在拖拉的過程中，會中斷模擬器，所以利用restart來重啟
     function dragstarted(d) {
